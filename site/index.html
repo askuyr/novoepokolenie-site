@@ -332,15 +332,7 @@
           <label><span>Какой результат хотите получить</span><textarea name="result" rows="4" required placeholder="Что должно измениться после реализации"></textarea></label>
           <button class="button button-primary proposal-submit" type="submit">Сформировать Word и скачать <span>↓</span></button>
           <p class="proposal-privacy">Word-файл создаётся только в вашем браузере и автоматически скачивается на устройство. Данные никуда не отправляются.</p>
-          <aside class="proposal-law" role="note" aria-label="Информация о персональных данных">
-            <span class="proposal-law-badge" aria-hidden="true">152-ФЗ</span>
-            <div class="proposal-law-copy">
-              <strong>Персональные данные и их защита</strong>
-              <p>Имя и контакт, введённые в этой форме, обрабатываются локально на вашем устройстве только для формирования файла заявки. Сайт не отправляет эти сведения на сервер и не хранит их.</p>
-              <p>Если вы самостоятельно отправите сформированный файл через VK, мессенджер, электронную почту или другим способом, персональные данные будут переданы выбранному вами сервису и получателю. При последующей обработке персональных данных применяются требования Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
-              <a href="https://ips.pravo.gov.ru/api/ips/legislation/document?baseid=None&amp;hash=98490812b3409e2a8d78a11ca9010f434ea3d9250a11dbbdb78690cd5551bdd6" target="_blank" rel="noopener noreferrer">Официальный текст 152-ФЗ <span aria-hidden="true">↗</span></a>
-            </div>
-          </aside>
+          <p class="proposal-privacy proposal-law-inline" role="note"><strong>152-ФЗ.</strong> Имя и контакт используются только локально на вашем устройстве для формирования Word-файла и не отправляются на сервер. Если вы самостоятельно пересылаете документ через VK, мессенджер или почту, данные передаются выбранному сервису и получателю. <a href="https://ips.pravo.gov.ru/api/ips/legislation/document?baseid=None&amp;hash=98490812b3409e2a8d78a11ca9010f434ea3d9250a11dbbdb78690cd5551bdd6" target="_blank" rel="noopener noreferrer">Федеральный закон № 152-ФЗ «О персональных данных» <span aria-hidden="true">↗</span></a></p>
         </form>
       </div>
       <div class="proposal-output" id="proposalOutput" role="status" aria-live="polite" aria-atomic="true" hidden>
@@ -392,7 +384,6 @@
       <a class="back-top" href="#top">Наверх ↑</a>
     </div>
   </footer>
-  <script src="proposal-docx.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=20260905-word-real" defer></script>
 </body>
 </html>

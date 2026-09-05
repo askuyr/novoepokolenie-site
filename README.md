@@ -1,388 +1,148 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#000500" />
-  <meta name="description" content="Новое поколение — открытая молодежная платформа, где идеи превращаются в команды, проекты и общественно полезный результат." />
-  <title>Новое поколение — от участия к влиянию</title>
-  <link rel="canonical" href="https://askuyr.github.io/novoepokolenie-site/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="ru_RU" />
-  <meta property="og:title" content="Новое поколение — от участия к влиянию" />
-  <meta property="og:description" content="Новое поколение — открытая молодежная платформа, где идеи превращаются в команды, проекты и общественно полезный результат." />
-  <meta property="og:url" content="https://askuyr.github.io/novoepokolenie-site/" />
-  <meta property="og:image" content="https://askuyr.github.io/novoepokolenie-site/assets/og-cover.jpg" />
-  <meta property="og:image:secure_url" content="https://askuyr.github.io/novoepokolenie-site/assets/og-cover.jpg" />
-  <!-- enhanced-meta:start -->
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <meta name="color-scheme" content="dark" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta property="og:site_name" content="Новое поколение" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Новое поколение — фирменный стиль и проекты" />
-  <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://askuyr.github.io/novoepokolenie-site/#organization","name":"Новое поколение","url":"https://askuyr.github.io/novoepokolenie-site/","description":"Открытая молодежная платформа для инициатив, развития и реальных действий.","logo":{"@type":"ImageObject","url":"https://askuyr.github.io/novoepokolenie-site/assets/logo-main.png","width":808,"height":384}},{"@type":"WebSite","@id":"https://askuyr.github.io/novoepokolenie-site/#website","url":"https://askuyr.github.io/novoepokolenie-site/","name":"Новое поколение","inLanguage":"ru-RU","publisher":{"@id":"https://askuyr.github.io/novoepokolenie-site/#organization"}},{"@type":"WebPage","@id":"https://askuyr.github.io/novoepokolenie-site/#webpage","url":"https://askuyr.github.io/novoepokolenie-site/","name":"Новое поколение — от участия к влиянию","description":"Новое поколение — открытая молодежная платформа, где идеи превращаются в команды, проекты и общественно полезный результат.","inLanguage":"ru-RU","isPartOf":{"@id":"https://askuyr.github.io/novoepokolenie-site/#website"},"about":{"@id":"https://askuyr.github.io/novoepokolenie-site/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://askuyr.github.io/novoepokolenie-site/assets/og-cover.jpg","width":1200,"height":630}}]}
-</script>
-  <!-- enhanced-meta:end -->
-  <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Кому подходит участие?","acceptedAnswer":{"@type":"Answer","text":"Целевая аудитория включает старшеклассников 9–11 классов, студентов СПО и вузов, молодых специалистов до 35 лет, а также участниц, заинтересованных в лидерстве и наставничестве."}},{"@type":"Question","name":"Можно прийти только с идеей, без команды?","acceptedAnswer":{"@type":"Answer","text":"Да. Идея может быть первым шагом: организация предполагает сбор и структурирование инициатив, поиск соисполнителей, проектное сопровождение и помощь с ресурсами."}},{"@type":"Question","name":"Что происходит после того, как я предложил идею?","acceptedAnswer":{"@type":"Answer","text":"Инициатива проходит от фиксации проблемы и ожидаемого результата к структурированию, формированию команды, поиску ресурсов, пилоту, защите результата и возможному масштабированию."}},{"@type":"Question","name":"Нужен ли опыт, чтобы участвовать?","acceptedAnswer":{"@type":"Answer","text":"Предварительный опыт не является обязательной отправной точкой для всех форматов. Концепция предусматривает, в частности, работу со старшеклассниками, у которых есть идеи, но ещё нет опыта реализации."}},{"@type":"Question","name":"Какие форматы работы предусмотрены?","acceptedAnswer":{"@type":"Answer","text":"Предусмотрены образовательные школы, лекции и семинары, проектные мастерские и офисы, стратегические сессии, дискуссии, деловые игры, реальные кейсы, встречи с практиками, наставничество, стажировки и публичные защиты."}},{"@type":"Question","name":"Организация занимается только государственным управлением?","acceptedAnswer":{"@type":"Answer","text":"Нет. Помимо Школы молодого чиновника, в структуре есть молодёжное и женское движения, проектный, волонтёрский и медиа-отделы."}},{"@type":"Question","name":"Можно ли включиться как наставник?","acceptedAnswer":{"@type":"Answer","text":"Да. Наставничество — одна из базовых ценностей организации; молодые специалисты также рассматриваются как наставники для школьников и студентов."}},{"@type":"Question","name":"Как сделать первый шаг прямо сейчас?","acceptedAnswer":{"@type":"Answer","text":"Можно заполнить форму «Предложить идею»: сайт сформирует локальный TXT-файл с заявкой, который можно переслать руководителю проекта во VK."}}]}
-  </script>
+# Новое поколение
 
+**Проект создаваемой молодёжной организации и открытой платформы для инициатив, развития и реальных действий.**
 
-  <link rel="icon" href="assets/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/favicon.png" />
-  <link rel="preload" href="assets/fonts/Unbounded-Variable.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/Ostrovsky-Bold.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/flag.webp" as="image" type="image/webp" fetchpriority="high" />
-  <script>if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion-ready')</script>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <a class="skip-link" href="#main-content">К основному содержанию</a>
-  <div class="page-progress" aria-hidden="true"><span id="progressBar"></span></div>
-  <div class="brand-motion-bg" aria-hidden="true">
-    <div class="brand-rays">
-      <span class="brand-ray"></span><span class="brand-ray"></span><span class="brand-ray"></span><span class="brand-ray"></span>
-    </div>
-    <img class="motion-symbol motion-symbol-one" src="assets/symbol.png" alt="" decoding="async" />
-    <img class="motion-symbol motion-symbol-two" src="assets/symbol.png" alt="" decoding="async" />
-  </div>
+> **Не ждать перемен. Создавать их.**
 
-  <header class="site-header" id="top">
-    <div class="nav-shell page-width">
-      <a class="brand-mark" href="#top" aria-label="Новое поколение — наверх">
-        <img src="assets/logo-main.png" alt="Новое поколение" width="808" height="384" decoding="async" />
-      </a>
-      <nav class="desktop-nav" aria-label="Основная навигация">
-        <a href="#idea">Идея</a>
-        <a href="#route">Маршрут</a>
-        <a href="#directions">Направления</a>
-        <a href="#school">Школа</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-      <a class="nav-cta" href="brandbook/index.html">Брендбук <span>↗</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Открыть меню">Меню</button>
-    </div>
-    <nav class="mobile-nav page-width" id="mobileNav" aria-label="Мобильная навигация" hidden>
-      <a href="#idea">Идея</a>
-      <a href="#route">Маршрут</a>
-      <a href="#audience">Для кого</a>
-      <a href="#benefits">Что получишь</a>
-      <a href="#directions">Направления</a>
-      <a href="#launch">Как запускаем проект</a>
-      <a href="#school">Школа молодого чиновника</a>
-      <a href="#faq">FAQ</a>
-      <a href="#proposal">Предложить идею</a>
-      <a href="#contacts">Контакты</a>
-      <a href="brandbook/index.html">Брендбук <span>↗</span></a>
-    </nav>
-  </header>
+🌐 **Сайт:** https://askuyr.github.io/novoepokolenie-site/  
+📦 **Репозиторий:** https://github.com/askuyr/novoepokolenie-site
 
-  <main id="main-content">
-    <section class="hero page-width reveal" data-section="hero" data-theme="#000500|rgba(241,218,191,.085)|rgba(54,36,23,.28)">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Молодежная организация / открытая платформа</p>
-          <h1>Не ждать<br /><em>перемен.</em><br />Создавать их.</h1>
-          <p class="hero-lead">«Новое поколение» соединяет молодежь, наставников, образование, бизнес и власть, чтобы идеи доходили до реального результата.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#route">Пройти маршрут <span>↗</span></a>
-            <a class="button button-quiet" href="#idea">Узнать об идее <span>↓</span></a>
-          </div>
-          <div class="hero-facts" aria-label="Коротко об организации">
-            <div><strong>03</strong><span>шага к результату</span></div>
-            <div><strong>05</strong><span>форматов развития</span></div>
-            <div><strong>14–35</strong><span>лет — активное участие</span></div>
-          </div>
-        </div>
-        <div class="hero-art" aria-label="Фирменный образ и маршрут от идеи к результату">
-          <span class="art-kicker">NEW GENERATION / 2026</span>
-          <img class="hero-symbol" src="assets/symbol.png" alt="" width="800" height="316" />
-          <div class="hero-media-card" data-hero-slides="assets/flag.webp|assets/tote.webp|assets/tshirt-taupe.webp|assets/tshirt-black.webp|assets/folder-black.webp|assets/pin-taupe.webp">
-            <img class="hero-slide is-active" src="assets/flag.webp" alt="Фирменная продукция «Новое поколение»" width="770" height="865" loading="eager" decoding="async" fetchpriority="high" />
-            <img class="hero-slide" alt="" aria-hidden="true" decoding="async" />
-            <span class="hero-slide-sheen" aria-hidden="true"></span>
-          </div>
-          <div class="art-orbit orbit-a"></div>
-          <div class="art-orbit orbit-b"></div>
-          <div class="route-chip">
-            <span>Идея</span><b>→</b><span>Команда</span><b>→</b><span>Результат</span>
-          </div>
-          <div class="art-note"><span>NP / 01</span><p>Не наблюдать за изменениями со стороны — собирать вокруг идеи людей и доводить её до результата.</p></div>
-          <span class="art-index">01 / OPEN PLATFORM</span>
-        </div>
-      </div>
-    </section>
+![Превью проекта](site/assets/og-cover.jpg)
 
-    <div aria-hidden="true" class="ticker"><div class="ticker-track"><div class="ticker-run">
-<span>БЫТЬ УСЛЫШАННЫМ</span><span>·</span><span>ГОВОРИТЬ</span><span>·</span><span>ДЕЛАТЬ</span><span>·</span><span>ОТ УЧАСТИЯ — К ВЛИЯНИЮ</span><span>·</span>
-</div><div class="ticker-run">
-<span>БЫТЬ УСЛЫШАННЫМ</span><span>·</span><span>ГОВОРИТЬ</span><span>·</span><span>ДЕЛАТЬ</span><span>·</span><span>ОТ УЧАСТИЯ — К ВЛИЯНИЮ</span><span>·</span>
-</div><div class="ticker-run">
-<span>БЫТЬ УСЛЫШАННЫМ</span><span>·</span><span>ГОВОРИТЬ</span><span>·</span><span>ДЕЛАТЬ</span><span>·</span><span>ОТ УЧАСТИЯ — К ВЛИЯНИЮ</span><span>·</span>
-</div></div></div>
+## Статус проекта
 
-    <section class="section idea page-width reveal" id="idea" data-theme="#070805|rgba(241,218,191,.075)|rgba(54,36,23,.30)">
-      <div class="section-label"><span>01</span><span>Идея</span></div>
-      <div class="idea-layout">
-        <div class="section-heading">
-          <p class="eyebrow">Зачем мы нужны</p>
-          <h2>Молодёжь —<br /><em>субъект</em> изменений.</h2>
-        </div>
-        <div class="idea-copy">
-          <p class="lead-copy">У молодых людей есть идеи и готовность действовать. Не всегда есть доступ к команде, опыту и понятному маршруту. Мы собираем эту инфраструктуру в одной открытой среде.</p>
-          <div class="mission-card">
-            <span class="card-label">МИССИЯ</span>
-            <p>Создать устойчивую среду, где каждый молодой человек может быть услышан, получить поддержку инициативы и довести её до общественно полезного результата.</p>
-          </div>
-        </div>
-      </div>
-      <div class="values-grid">
-        <article class="value-card"><span>01 / Передача опыта</span><h3>Наставничество</h3><p>Опыт старших становится ресурсом для самостоятельного шага, а не барьером.</p></article>
-        <article class="value-card"><span>02 / Без формальных барьеров</span><h3>Открытый диалог</h3><p>Прямой разговор молодежи с властью, бизнесом, наукой и обществом.</p></article>
-        <article class="value-card"><span>03 / Видимый итог</span><h3>Ответственность</h3><p>Каждая договоренность получает владельца, срок и измеримый результат.</p></article>
-        <article class="value-card"><span>04 / Вместе сильнее</span><h3>Командность</h3><p>Горизонтальные связи и взаимопомощь важнее личной конкуренции.</p></article>
-        <article class="value-card"><span>05 / В движении</span><h3>Развитие</h3><p>Учиться, пробовать, адаптироваться и становиться сильнее как сообщество.</p></article>
-      </div>
-    </section>
+**Организация находится на этапе формирования.**
 
-    <section class="section route-section reveal" id="route" data-theme="#100c09|rgba(146,129,122,.12)|rgba(54,36,23,.38)">
-      <div class="page-width">
-        <div class="section-label"><span>02</span><span>Философия «Три действия»</span></div>
-        <div class="route-heading"><p class="eyebrow">Маршрут участника</p><h2>От голоса —<br /><em>к результату.</em></h2><p>Последовательность, которая превращает пассивное наблюдение в опыт реального влияния.</p></div>
-        <div class="route-grid">
-          <article class="route-card route-card-light"><div class="step-top"><span>01</span><span>Сначала</span></div><h3>Быть<br />услышанным</h3><p>Высказать позицию, предложить идею или обозначить проблему — и увидеть, что её зафиксировали.</p><ul><li>открытые сборы инициатив</li><li>опросы и цифровые каналы</li><li>публичное рассмотрение идей</li></ul></article>
-          <article class="route-card route-card-dark"><div class="step-top"><span>02</span><span>Затем</span></div><h3>Говорить</h3><p>Сформулировать решение, научиться работать с данными, аргументировать и договариваться с другими.</p><ul><li>дискуссионные клубы и дебаты</li><li>аналитические записки и кейсы</li><li>публичные выступления</li></ul></article>
-          <article class="route-card route-card-coffee"><div class="step-top"><span>03</span><span>И дальше</span></div><h3>Делать</h3><p>Запустить инициативу, найти ресурсы и показать общественно полезный эффект — вместе с наставником.</p><ul><li>проектные команды и гранты</li><li>пилоты и масштабирование</li><li>защита результатов</li></ul></article>
-        </div>
-      </div>
-    </section>
+Сейчас мы собираем команду, уточняем структуру, готовим первые инициативы, форматы работы и партнёрские связи. Сайт используется как публичная точка входа в проект: здесь можно познакомиться с концепцией, направлениями, предложить идею и понять, как присоединиться к созданию организации.
 
-    <section class="section audience page-width reveal" id="audience" data-theme="#050604|rgba(241,218,191,.06)|rgba(146,129,122,.18)">
-      <div class="section-label"><span>03</span><span>Для кого</span></div>
-      <div class="section-heading wide-heading"><p class="eyebrow">Разные точки входа</p><h2>У каждого —<br /><em>свой первый шаг.</em></h2></div>
-      <div class="audience-grid">
-        <article class="audience-card"><span class="audience-age">14–18</span><h3>Старшеклассники</h3><p>Попробовать идею в реальном деле и получить обратную связь от практиков.</p><span class="audience-format">Проектные мастерские · карьерные встречи</span></article>
-        <article class="audience-card"><span class="audience-age">16–20</span><h3>Студенты СПО</h3><p>Показать прикладные навыки, выйти из роли исполнителя, увидеть карьерные примеры.</p><span class="audience-format">Реальные кейсы · встречи с выпускниками</span></article>
-        <article class="audience-card audience-card-accent"><span class="audience-age">18–30</span><h3>Студенты вузов</h3><p>Собрать команду, найти ресурсы и пройти путь от идеи до работающего проекта.</p><span class="audience-format">Проектные офисы · акселерация · открытый чат</span></article>
-        <article class="audience-card"><span class="audience-age">до 35</span><h3>Молодые специалисты</h3><p>Получить горизонтальные связи, наставнический опыт и управленческую практику.</p><span class="audience-format">Отраслевые клубы · менторство</span></article>
-        <article class="audience-card audience-card-wide"><span class="audience-age">для девушек</span><h3>Женское лидерство</h3><p>Безопасная среда, ролевые модели и менторские пары для первых шагов в лидерстве.</p><span class="audience-format">4 трека · встречи с женщинами-лидерами · поддержка</span></article>
-      </div>
-    </section>
+## Идея
 
-    <section class="section section-compact benefits page-width reveal" id="benefits" data-theme="#0a0806|rgba(241,218,191,.075)|rgba(54,36,23,.30)">
-      <div class="section-label"><span>04</span><span>Что получишь</span></div>
-      <div class="benefits-head">
-        <div class="section-heading"><p class="eyebrow">Практика вместо наблюдения</p><h2>Не только участие.<br /><em>Реальный опыт.</em></h2></div>
-        <p class="benefits-lead">Участие строится вокруг практики: реальных кейсов, проектных команд, наставничества, поиска ресурсов и публичной защиты результата.</p>
-      </div>
-      <div class="benefits-grid">
-        <article class="benefit-card"><span>01 / Практика</span><h3>Проектный опыт</h3><p>Работа над реальными управленческими и социальными кейсами, проектные офисы и запуск пилотных инициатив.</p></article>
-        <article class="benefit-card"><span>02 / Сопровождение</span><h3>Наставник</h3><p>Персональное сопровождение и передача знаний, опыта и навыков от практиков и старших участников.</p></article>
-        <article class="benefit-card"><span>03 / Сообщество</span><h3>Команда и связи</h3><p>Горизонтальные связи со студентами, молодыми специалистами, предпринимателями и профессиональными сообществами.</p></article>
-        <article class="benefit-card"><span>04 / Ресурсы</span><h3>Гранты и дорожная карта</h3><p>Помощь с грантовыми заявками, поиском ресурсов, структурированием инициативы и подготовкой дорожной карты.</p></article>
-        <article class="benefit-card"><span>05 / Коммуникация</span><h3>Публичность</h3><p>Аргументация, аналитические материалы, публичные выступления, защита проектов и работа с информационной повесткой.</p></article>
-        <article class="benefit-card"><span>06 / Среда</span><h3>Практика и стажировки</h3><p>Деловые игры, День самоуправления, экскурсии и практико-ориентированные форматы в органах власти и компаниях.</p></article>
-      </div>
-    </section>
+«Новое поколение» строится вокруг простой логики:
 
-    <section class="section directions reveal" id="directions" data-theme="#0e0b08|rgba(241,218,191,.075)|rgba(54,36,23,.34)">
-      <div class="page-width">
-        <div class="section-label"><span>05</span><span>Направления</span></div>
-        <div class="directions-layout">
-          <div class="section-heading"><p class="eyebrow">Открытая экосистема</p><h2>Пять способов<br />быть <em class="inside-accent">ВНУТРИ.</em></h2><p class="heading-note">Можно начать с проекта, коммуникации, волонтерства или собственного профессионального трека.</p></div>
-          <div class="direction-list">
-            <a class="direction-item" href="youth-movement.html"><span>01</span><div><h3>Молодёжное движение</h3><p>Формируем повестку, соединяем разные группы и готовим предложения для города и региона.</p></div><b>↗</b></a>
-            <a class="direction-item" href="women-movement.html"><span>02</span><div><h3>Женское движение</h3><p>Развиваем лидерство через наставничество, образование и практическую деятельность.</p></div><b>↗</b></a>
-            <a class="direction-item" href="project-department.html"><span>03</span><div><h3>Проектный отдел</h3><p>Собираем события, стратегические сессии и программы, в которых идеи становятся проектами.</p></div><b>↗</b></a>
-            <a class="direction-item" href="volunteer-department.html"><span>04</span><div><h3>Волонтёрский отдел</h3><p>Помогаем событиям и социальным инициативам, развивая ответственность и команду.</p></div><b>↗</b></a>
-            <a class="direction-item" href="media-department.html"><span>05</span><div><h3>Медиа-отдел</h3><p>Рассказываем о людях и результатах через новости, интервью, фото и видео.</p></div><b>↗</b></a>
-          </div>
-        </div>
-      </div>
-    </section>
+**Быть услышанным → Говорить → Делать**
 
-    <section class="section section-compact launch page-width reveal" id="launch" data-theme="#050604|rgba(146,129,122,.11)|rgba(54,36,23,.34)">
-      <div class="section-label"><span>06</span><span>Как запускается проект</span></div>
-      <div class="launch-heading">
-        <div class="section-heading"><p class="eyebrow">Проектно-инфраструктурная поддержка</p><h2>Идея не должна<br /><em>оставаться идеей.</em></h2></div>
-        <p>Организация сопровождает инициативу от формулировки и структурирования до поиска ресурсов, пилотирования, оценки и масштабирования.</p>
-      </div>
-      <div class="launch-flow" aria-label="Маршрут запуска проекта">
-        <article><span>01</span><h3>Идея</h3><p>Фиксируем проблему, цель и ожидаемый общественно полезный результат.</p></article>
-        <article><span>02</span><h3>Команда</h3><p>Собираем соисполнителей и распределяем роли вокруг инициативы.</p></article>
-        <article><span>03</span><h3>Упаковка</h3><p>Структурируем решение, готовим план, дорожную карту и обоснование.</p></article>
-        <article><span>04</span><h3>Ресурсы</h3><p>Ищем партнёров, площадки и финансирование, сопровождаем грантовую заявку.</p></article>
-        <article><span>05</span><h3>Пилот</h3><p>Запускаем инициативу в реальной среде и собираем обратную связь.</p></article>
-        <article><span>06</span><h3>Масштаб</h3><p>Оцениваем эффективность, защищаем результат и решаем, как развивать проект дальше.</p></article>
-      </div>
-    </section>
+Наша цель — создать понятный маршрут от идеи к команде, от команды к проекту, а от проекта — к реальному общественно полезному результату.
 
-    <section class="section school page-width reveal" id="school" data-theme="#030503|rgba(241,218,191,.06)|rgba(54,36,23,.26)">
-      <div class="section-label"><span>07</span><span>Кадровый проект</span></div>
-      <div class="school-card">
-        <div class="school-main"><span class="card-label">ШКОЛА МОЛОДОГО ЧИНОВНИКА</span><h2>Кадровый резерв<br /><em>начинается с практики.</em></h2><p>Программа для студентов факультета государственного и муниципального управления: ценности, компетенции, реальные кейсы и сообщество выпускников.</p><div class="school-actions"><a class="button button-light" href="school.html">Открыть программу <span>↗</span></a><a class="school-text-link" href="#proposal">Задать вопрос →</a></div></div>
-        <div class="school-side">
-          <div class="school-block"><span>01 / Ценности</span><strong>Этический кодекс и встречи с носителями опыта</strong></div>
-          <div class="school-block"><span>02 / Компетенции</span><strong>День самоуправления, тренинги и реальные задачи</strong></div>
-          <div class="school-block"><span>03 / Команда</span><strong>Наставничество, стратегические сессии и клуб выпускников</strong></div>
-          <div class="school-block"><span>04 / Коммуникация</span><strong>Медиа, профориентация и открытая отчетность</strong></div>
-        </div>
-      </div>
-    </section>
+## Что уже есть на сайте
 
-    <section class="section section-compact proof page-width reveal" id="proof" data-theme="#100c09|rgba(241,218,191,.07)|rgba(146,129,122,.13)">
-      <div class="section-label"><span>08</span><span>Практика и результат</span></div>
-      <div class="proof-layout">
-        <div class="section-heading"><p class="eyebrow">Что считается результатом</p><h2>Не посещение.<br /><em>Изменение.</em></h2><p class="heading-note">Инициатива должна пройти до конкретного действия: подготовленного решения, пилота, публичной защиты или масштабирования.</p></div>
-        <div class="proof-list">
-          <article><span>01</span><div><h3>Решение оформлено</h3><p>Есть проектное предложение, аналитическая записка, дорожная карта или грантовая заявка.</p></div></article>
-          <article><span>02</span><div><h3>Пилот запущен</h3><p>Идея проверена на практике, а команда получила обратную связь от реальной среды.</p></div></article>
-          <article><span>03</span><div><h3>Результат защищён</h3><p>Команда публично показывает, что сделано, чему научилась и какой эффект получила.</p></div></article>
-          <article><span>04</span><div><h3>Есть продолжение</h3><p>Успешный пилот получает решение о доработке, масштабировании или включении в практику партнёров.</p></div></article>
-        </div>
-      </div>
-      <div class="formats-shell">
-        <div><span class="card-label">ФОРМАТЫ РАБОТЫ</span><h3>Где это происходит</h3><p>В концепции зафиксированы форматы, через которые участники получают знания и практику. Конкретные даты публикуются после утверждения календаря.</p></div>
-        <div class="formats-grid">
-          <span>Образовательные школы</span><span>Лекции и семинары</span><span>Стратегические сессии</span><span>Деловые игры</span><span>Встречи со спикерами</span><span>Публичные защиты проектов</span>
-        </div>
-      </div>
-    </section>
+- адаптивная главная страница;
+- концепция и логика «Три действия»;
+- блоки «Кому подходит», «Что ты получишь» и «Как запускается проект»;
+- структура формируемых направлений;
+- страница проекта «Школа молодого чиновника»;
+- форма «Предложить идею» с формированием и скачиванием `.txt`-заявки;
+- FAQ «Как всё работает»;
+- фирменная страница 404;
+- страница контактов;
+- интерактивный брендбук;
+- цикличная бегущая строка;
+- анимированная смена изображений в hero-блоке;
+- микроанимации с поддержкой `prefers-reduced-motion`;
+- клавиатурная навигация и улучшенные focus-состояния;
+- Open Graph-превью для VK;
+- sitemap, robots и базовая SEO-разметка;
+- автоматическая публикация через GitHub Pages.
 
-    <section class="section partners page-width reveal" id="partners" data-theme="#0b0806|rgba(146,129,122,.09)|rgba(54,36,23,.32)">
-      <div class="section-label"><span>09</span><span>Наставники и партнерство</span></div>
-      <div class="partners-layout">
-        <div class="section-heading"><p class="eyebrow">Среда, которая поддерживает</p><h2>Один маршрут.<br /><em>Много союзников.</em></h2></div>
-        <div class="partners-copy"><p>Наставничество — один из базовых принципов организации: знания, опыт и навыки передаются через персональное сопровождение, а партнёрская среда соединяет молодежь с образованием, профессиональным сообществом и общественными институтами.</p><div class="mentor-note"><span>НАСТАВНИЧЕСТВО</span><strong>Не сделать за участника, а помочь ему самому пройти путь от первого решения до результата.</strong></div><div class="partner-tags"><span>Вузы</span><span>СПО</span><span>Школы</span><span>Молодёжные советы</span><span>Бизнес</span><span>СМИ</span><span>Органы власти</span><span>НКО</span></div></div>
-      </div>
-    </section>
+## Основные страницы
 
-    <section class="section section-compact faq page-width reveal" id="faq" data-theme="#070805|rgba(241,218,191,.075)|rgba(54,36,23,.30)">
-      <div class="section-label"><span>10</span><span>FAQ / Как всё работает</span></div>
-      <div class="faq-layout">
-        <div class="faq-intro section-heading">
-          <p class="eyebrow">Коротко и по делу</p>
-          <h2>Перед первым шагом<br /><em>можно спросить.</em></h2>
-          <p class="heading-note">Ответы собраны по концепции организации. Условия конкретных программ, дат и наборов могут уточняться отдельно.</p>
-          <a class="school-text-link" href="#proposal">Не нашли ответ? Предложить идею →</a>
-        </div>
-        <div class="faq-list" aria-label="Частые вопросы об участии в «Новом поколении»">
-          <details class="faq-item">
-            <summary><span class="faq-index">01</span><span class="faq-question">Кому подходит участие?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Целевая аудитория включает старшеклассников 9–11 классов, студентов СПО и вузов, молодых специалистов до 35 лет, а также участниц, заинтересованных в лидерстве и наставничестве. Точка входа зависит от опыта и задачи.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary><span class="faq-index">02</span><span class="faq-question">Можно прийти только с идеей, без команды?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Да. Идея может быть первым шагом. Организация предполагает сбор и структурирование инициатив, поиск соисполнителей, проектное сопровождение и помощь с ресурсами — от формулировки до пилота.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary><span class="faq-index">03</span><span class="faq-question">Что происходит после того, как я предложил идею?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Сначала фиксируется проблема и ожидаемый результат. Затем инициатива структурируется, вокруг неё формируется команда, подбираются ресурсы и формат пилота. После практической проверки результат можно защищать, дорабатывать и масштабировать.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary><span class="faq-index">04</span><span class="faq-question">Нужен ли опыт, чтобы участвовать?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Предварительный опыт не является обязательной отправной точкой для всех форматов. Например, концепция отдельно предусматривает работу со старшеклассниками, у которых уже есть идеи, но ещё нет опыта их реализации, — через мастерские и обратную связь от практиков.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary><span class="faq-index">05</span><span class="faq-question">Какие форматы работы предусмотрены?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Образовательные школы, лекции и семинары, проектные мастерские и офисы, стратегические сессии, дискуссии, деловые игры, работа над реальными кейсами, встречи с практиками, наставничество, стажировки и публичные защиты проектов.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary><span class="faq-index">06</span><span class="faq-question">Организация занимается только государственным управлением?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Нет. Государственное и муниципальное управление — одно из направлений и основа отдельной «Школы молодого чиновника». В структуре также есть молодёжное и женское движения, проектный, волонтёрский и медиа-отделы.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary><span class="faq-index">07</span><span class="faq-question">Можно ли включиться как наставник?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Да, наставничество заложено в философию организации как передача опыта и сопровождение участника. В концепции молодые специалисты также рассматриваются как наставники для школьников и студентов.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary><span class="faq-index">08</span><span class="faq-question">Как сделать первый шаг прямо сейчас?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Заполните форму «Предложить идею»: сайт сформирует локальный TXT-файл с заявкой и скачает его на устройство. Его можно переслать руководителю проекта во VK или использовать как готовый черновик для дальнейшего обсуждения.</p></div>
-          </details>
-        </div>
-      </div>
-    </section>
+| Раздел | Ссылка |
+| --- | --- |
+| Главная | https://askuyr.github.io/novoepokolenie-site/ |
+| Школа молодого чиновника | https://askuyr.github.io/novoepokolenie-site/school.html |
+| Молодёжное движение | https://askuyr.github.io/novoepokolenie-site/youth-movement.html |
+| Женское движение | https://askuyr.github.io/novoepokolenie-site/women-movement.html |
+| Волонтёрский отдел | https://askuyr.github.io/novoepokolenie-site/volunteer-department.html |
+| Проектный отдел | https://askuyr.github.io/novoepokolenie-site/project-department.html |
+| Медиа-отдел | https://askuyr.github.io/novoepokolenie-site/media-department.html |
+| Контакты | https://askuyr.github.io/novoepokolenie-site/contacts.html |
+| Брендбук | https://askuyr.github.io/novoepokolenie-site/brandbook/ |
 
-    <section class="section section-compact proposal page-width reveal" id="proposal" data-theme="#000500|rgba(241,218,191,.09)|rgba(54,36,23,.38)">
-      <div class="section-label"><span>11</span><span>Предложить идею</span></div>
-      <div class="proposal-layout">
-        <div class="proposal-intro">
-          <p class="eyebrow">Первое действие — быть услышанным</p>
-          <h2>Опиши идею.<br /><em>Собери первый шаг.</em></h2>
-          <p>Заполни пять полей — сайт сам соберёт аккуратную заявку и сразу скачает её на устройство. Файл можно переслать во VK, мессенджере или по почте.</p>
-          <div class="proposal-points"><span>Проблема</span><span>Идея</span><span>Ожидаемый результат</span><span>Контакт</span></div>
-        </div>
-        <form class="proposal-form" id="proposalForm">
-          <div class="proposal-form-head" aria-hidden="true">
-            <div><span>PROJECT NOTE / 01</span><strong>Черновик проекта</strong></div>
-            <p>5 полей → готовый файл</p>
-          </div>
-          <div class="field-grid">
-            <label><span>Имя</span><input name="name" autocomplete="name" required placeholder="Как к вам обращаться" /></label>
-            <label><span>Кто вы</span><select name="role" required><option value="" selected disabled>Выберите вариант</option><option>Школьник 9–11 класса</option><option>Студент СПО</option><option>Студент вуза</option><option>Молодой специалист</option><option>Хочу стать наставником</option><option>Другое</option></select></label>
-          </div>
-          <label><span>Контакт</span><input name="contact" required placeholder="VK, телефон или другой удобный способ связи" /></label>
-          <label><span>Название идеи</span><input name="title" required placeholder="Коротко — о чём проект" /></label>
-          <label><span>Что хотите изменить</span><textarea name="problem" rows="4" required placeholder="Опишите проблему или ситуацию"></textarea></label>
-          <label><span>Какой результат хотите получить</span><textarea name="result" rows="4" required placeholder="Что должно измениться после реализации"></textarea></label>
-          <button class="button button-primary proposal-submit" type="submit">Сформировать и скачать <span>↓</span></button>
-          <p class="proposal-privacy">Файл создаётся только в вашем браузере и автоматически скачивается на устройство. Данные никуда не отправляются.</p>
-        </form>
-      </div>
-      <div class="proposal-output" id="proposalOutput" role="status" aria-live="polite" aria-atomic="true" hidden>
-        <div class="proposal-output-intro">
-          <span class="card-label">ФАЙЛ ГОТОВ</span>
-          <h3>Заявка сформирована и скачана.</h3>
-          <p>Её можно переслать как обычный файл. Имя автоматически содержит название проекта.</p>
-          <div class="proposal-file-pill"><span>TXT</span><strong id="proposalFileName">Заявка.txt</strong></div>
-        </div>
-        <pre id="proposalText"></pre>
-        <div class="proposal-output-actions">
-          <button class="button button-light" id="downloadProposal" type="button">Скачать ещё раз <span>↓</span></button>
-          <button class="button button-quiet-dark" id="copyProposal" type="button">Скопировать <span>↗</span></button>
-          <a class="button button-quiet-dark" href="https://vk.ru/sergeynesko" target="_blank" rel="noopener noreferrer">Открыть VK <span>↗</span></a>
-        </div>
-      </div>
-    </section>
+## Технологии
 
-    <section class="section contacts page-width reveal" id="contacts" data-theme="#0b0806|rgba(241,218,191,.09)|rgba(54,36,23,.34)">
-      <div class="section-label"><span>12</span><span>Контакты</span></div>
-      <div class="contacts-layout">
-        <div class="section-heading">
-          <p class="eyebrow">Связаться с проектом</p>
-          <h2>Руководитель<br /><em>проекта.</em></h2>
-        </div>
-        <article class="contact-card">
-          <span class="card-label">РУКОВОДИТЕЛЬ ПРОЕКТА</span>
-          <h3>Сергей<br />Нескоромных</h3>
-          <div class="contact-links" aria-label="Контакты Сергея Нескоромных">
-            <a href="https://vk.ru/sergeynesko" target="_blank" rel="noopener noreferrer"><span>VK</span><strong>vk.ru/sergeynesko</strong><b>↗</b></a>
-            <a href="tel:+79952345912"><span>Телефон</span><strong>+7 995 234-59-12</strong><b>↗</b></a>
-          </div>
-        </article>
-      </div>
-    </section>
+Сайт сделан без тяжёлых фреймворков и отдельной сборки:
 
-    <section class="join page-width reveal" id="join" data-theme="#000500|rgba(241,218,191,.095)|rgba(54,36,23,.38)">
-      <div class="join-card">
-        <div><span class="eyebrow">Следующий шаг</span><h2>Есть идея?<br /><em>Давай сделаем.</em></h2></div>
-        <div class="join-copy"><p>Выбери точку входа: предложи инициативу, присоединись к проектной команде, стань наставником или помоги рассказать о результатах.</p><div class="join-actions"><a class="button button-primary" href="#proposal">Предложить идею <span>↗</span></a><a class="button button-quiet-dark" href="#directions">Выбрать направление <span>↓</span></a></div></div>
-      </div>
-    </section>
-  </main>
+- HTML5;
+- CSS3;
+- Vanilla JavaScript;
+- локальные шрифты и графика;
+- GitHub Actions;
+- GitHub Pages.
 
-  <footer class="site-footer">
-    <div class="page-width footer-row">
-      <a class="brand-mark" href="#top" aria-label="Новое поколение — наверх"><img src="assets/logo-main.png" alt="Новое поколение" width="808" height="384" decoding="async" /></a>
-      <p>От участия — к влиянию.</p>
-      <a class="back-top" href="#top">Наверх ↑</a>
-    </div>
-  </footer>
-  <script src="app.js" defer></script>
-</body>
-</html>
+## Структура репозитория
+
+```text
+novoepokolenie-site/
+├── .github/
+│   └── workflows/
+│       └── pages.yml
+├── site/
+│   ├── index.html
+│   ├── school.html
+│   ├── contacts.html
+│   ├── youth-movement.html
+│   ├── women-movement.html
+│   ├── volunteer-department.html
+│   ├── project-department.html
+│   ├── media-department.html
+│   ├── 404.html
+│   ├── styles.css
+│   ├── direction.css
+│   ├── school.css
+│   ├── app.js
+│   ├── assets/
+│   ├── brandbook/
+│   ├── robots.txt
+│   └── sitemap.xml
+└── README.md
+```
+
+## Локальный запуск
+
+Для обычного просмотра можно открыть `site/index.html` в браузере.
+
+Для более точной локальной проверки лучше запустить простой HTTP-сервер из папки `site`:
+
+```bash
+python3 -m http.server 8000
+```
+
+После этого открыть:
+
+```text
+http://localhost:8000/
+```
+
+## Публикация на GitHub Pages
+
+Публичная версия разворачивается автоматически через GitHub Actions из папки `site/`.
+
+Обычный процесс обновления:
+
+1. Изменить нужные файлы в `site/`.
+2. Сделать commit в ветку `main`.
+3. Дождаться успешного workflow во вкладке **Actions**.
+4. Проверить сайт по адресу: https://askuyr.github.io/novoepokolenie-site/
+
+## Где что менять
+
+| Задача | Файл |
+| --- | --- |
+| Главная страница | `site/index.html` |
+| Основной дизайн | `site/styles.css` |
+| Интерактив и форма идеи | `site/app.js` |
+| Страницы направлений | `site/*-department.html`, `site/*-movement.html` |
+| Стили направлений | `site/direction.css` |
+| Школа молодого чиновника | `site/school.html`, `site/school.css` |
+| Страница 404 | `site/404.html` |
+| Графика и шрифты | `site/assets/` |
+| Карта сайта | `site/sitemap.xml` |
+| GitHub Pages workflow | `.github/workflows/pages.yml` |
+
+## Важно
+
+Сайт пока не должен создавать впечатление, что организация уже полностью сформирована и ведёт регулярную деятельность. Формулировки про команду, партнёров, проекты, мероприятия и результаты следует обновлять по мере их реального появления и подтверждения.
+
+---
+
+**Новое поколение**  
+*От участия — к влиянию.*

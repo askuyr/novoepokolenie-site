@@ -1089,3 +1089,145 @@ body{letter-spacing:-.008em}
   .site-footer{padding:22px 0 26px}
   .footer-row .brand-mark{width:106px}
 }
+
+/* ===== Concept expansion: benefits, project launch, proof, proposal. ===== */
+.section-compact{padding-top:clamp(118px,10.5vw,168px);padding-bottom:clamp(118px,10.5vw,168px)}
+
+/* Benefits */
+.benefits-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.72fr);gap:clamp(62px,8vw,126px);align-items:end}
+.benefits-head>*{min-width:0}
+.benefits-lead{margin:0;max-width:620px;color:rgba(255,251,255,.74);font-size:clamp(16px,1.45vw,22px);line-height:1.58;letter-spacing:-.025em}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(72px,7.5vw,112px);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.benefit-card{min-width:0;min-height:330px;padding:34px 34px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;background:linear-gradient(145deg,rgba(255,255,255,.018),transparent 68%);transition:background .3s ease,transform .35s var(--ease)}
+.benefit-card:hover{background:rgba(241,218,191,.055);transform:translateY(-4px)}
+.benefit-card>span{font-size:9.5px;line-height:1.4;color:rgba(241,218,191,.54);letter-spacing:.08em;text-transform:uppercase}
+.benefit-card h3{margin:clamp(62px,5vw,86px) 0 0;font-size:clamp(22px,2.1vw,31px);line-height:1.04;letter-spacing:-.045em;font-weight:600}
+.benefit-card p{margin:auto 0 0;padding-top:28px;color:rgba(255,251,255,.62);font-size:12.5px;line-height:1.68;max-width:410px}
+
+/* Project launch flow */
+.launch-heading{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.66fr);gap:clamp(62px,8vw,128px);align-items:end}
+.launch-heading>*{min-width:0}
+.launch-heading>p{margin:0 0 6px;color:rgba(255,251,255,.64);font-size:13.5px;line-height:1.72;max-width:560px}
+.launch-flow{margin-top:clamp(76px,8vw,118px);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.launch-flow article{position:relative;min-width:0;min-height:350px;padding:28px 24px 32px;border-right:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
+.launch-flow article:last-child{border-right:0}
+.launch-flow article::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--almond);transition:right .45s var(--ease)}
+.launch-flow article:hover::after{right:0}
+.launch-flow article>span{font-size:11px;color:rgba(241,218,191,.58)}
+.launch-flow h3{margin:clamp(80px,6vw,112px) 0 0;font-size:clamp(20px,1.8vw,27px);line-height:1.04;letter-spacing:-.045em}
+.launch-flow p{margin:auto 0 0;padding-top:24px;color:rgba(255,251,255,.58);font-size:11px;line-height:1.66}
+
+.school-actions{margin-top:auto;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.school-main .school-actions .button-light{margin-top:0}
+.school-text-link{font-size:10px;text-decoration:underline;text-decoration-color:rgba(0,5,0,.34);text-underline-offset:5px;transition:opacity .2s ease,transform .25s var(--ease)}
+.school-text-link:hover{opacity:.66;transform:translateX(3px)}
+
+/* Practical result + formats */
+.proof-layout{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(76px,10vw,160px);align-items:start}
+.proof-layout>*{min-width:0}
+.proof .section-heading{position:sticky;top:120px}
+.proof-list{border-top:1px solid var(--line)}
+.proof-list article{display:grid;grid-template-columns:48px minmax(0,1fr);gap:24px;padding:34px 0;border-bottom:1px solid var(--line);transition:padding-left .3s var(--ease),background .25s ease}
+.proof-list article:hover{padding-left:12px}
+.proof-list article>span{font-size:10px;color:rgba(241,218,191,.55);padding-top:4px}
+.proof-list h3{margin:0;font-size:clamp(20px,2vw,29px);line-height:1.06;letter-spacing:-.04em}
+.proof-list p{margin:14px 0 0;color:rgba(255,251,255,.58);font-size:12px;line-height:1.7;max-width:660px}
+.formats-shell{margin-top:clamp(78px,8vw,118px);padding:clamp(38px,4.2vw,62px);border:1px solid var(--line);border-radius:var(--radius);display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(54px,7vw,110px);background:linear-gradient(135deg,rgba(241,218,191,.035),rgba(54,36,23,.09))}
+.formats-shell>div{min-width:0}
+.formats-shell h3{margin:28px 0 0;font-size:clamp(28px,3.2vw,46px);line-height:.98;letter-spacing:-.055em}
+.formats-shell p{margin:22px 0 0;color:rgba(255,251,255,.56);font-size:11.5px;line-height:1.72;max-width:520px}
+.formats-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;border-top:1px solid var(--line)}
+.formats-grid span{padding:20px 8px 20px 0;border-bottom:1px solid var(--line);font-size:11.5px;line-height:1.45;color:rgba(255,251,255,.78)}
+.formats-grid span:nth-child(odd){padding-right:20px}
+.formats-grid span:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}
+
+/* Mentors + partners */
+.mentor-note{margin-top:40px;padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:140px minmax(0,1fr);gap:28px}
+.mentor-note span{font-size:9px;line-height:1.4;letter-spacing:.08em;color:rgba(241,218,191,.52)}
+.mentor-note strong{font-size:13px;line-height:1.6;font-weight:450;color:rgba(255,251,255,.8)}
+
+/* Idea proposal form */
+.proposal-layout{display:grid;grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr);gap:clamp(74px,9vw,150px);align-items:start}
+.proposal-layout>*{min-width:0}
+.proposal-intro{position:sticky;top:120px}
+.proposal-intro h2{margin:18px 0 0;font-size:clamp(48px,5.4vw,78px);line-height:.92;letter-spacing:-.06em}
+.proposal-intro h2 em{font-family:"Ostrovsky",Georgia,serif;font-style:normal;font-weight:700;color:var(--almond);letter-spacing:-.035em}
+.proposal-intro>p:last-of-type{margin:34px 0 0;color:rgba(255,251,255,.62);font-size:12.5px;line-height:1.72;max-width:520px}
+.proposal-points{display:flex;gap:8px;flex-wrap:wrap;margin-top:34px}
+.proposal-points span{padding:9px 12px;border:1px solid var(--line);border-radius:999px;color:rgba(241,218,191,.65);font-size:8.5px;line-height:1.2}
+.proposal-form{padding:clamp(28px,3.2vw,48px);border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.018)}
+.proposal-form label{display:block;margin-bottom:22px}
+.proposal-form label>span{display:block;margin-bottom:9px;font-size:9px;line-height:1.4;letter-spacing:.055em;text-transform:uppercase;color:rgba(241,218,191,.56)}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.proposal-form input,.proposal-form textarea,.proposal-form select{width:100%;border:1px solid rgba(241,218,191,.18);border-radius:14px;background:rgba(0,5,0,.52);color:var(--snow);font:inherit;font-size:12px;line-height:1.5;padding:15px 16px;outline:none;transition:border-color .2s ease,background .2s ease,box-shadow .2s ease}
+.proposal-form textarea{resize:vertical;min-height:116px}
+.proposal-form select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,rgba(241,218,191,.65) 50%),linear-gradient(135deg,rgba(241,218,191,.65) 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:40px}
+.proposal-form input::placeholder,.proposal-form textarea::placeholder{color:rgba(255,251,255,.28)}
+.proposal-form input:focus,.proposal-form textarea:focus,.proposal-form select:focus{border-color:rgba(241,218,191,.55);background:rgba(0,5,0,.72);box-shadow:0 0 0 3px rgba(241,218,191,.06)}
+.proposal-form option{background:#0a0c09;color:var(--snow)}
+.proposal-submit{margin-top:5px;border:0;cursor:pointer}
+.proposal-privacy{margin:16px 0 0;color:rgba(255,251,255,.38);font-size:8.5px;line-height:1.55}
+.proposal-output{margin-top:26px;padding:clamp(28px,3.2vw,46px);border-radius:var(--radius);background:var(--almond);color:var(--black);display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:28px 48px;align-items:start}
+.proposal-output[hidden]{display:none}
+.proposal-output h3{margin:22px 0 0;font-size:clamp(22px,2.4vw,34px);line-height:1.05;letter-spacing:-.045em}
+.proposal-output pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:"Unbounded",Arial,sans-serif;font-size:10.5px;line-height:1.72;padding:24px;border:1px solid rgba(0,5,0,.16);border-radius:18px;background:rgba(255,255,255,.18)}
+.proposal-output-actions{grid-column:2;display:flex;gap:10px;flex-wrap:wrap}
+.proposal-output .button-light{background:var(--black);color:var(--snow);border-color:var(--black);cursor:pointer}
+.proposal-output .button-quiet-dark{border-color:rgba(0,5,0,.22);color:var(--black)}
+.proposal-output .button-quiet-dark:hover{background:rgba(0,5,0,.06)}
+.proposal-output.is-copied #copyProposal{background:#1b2a18;color:var(--snow)}
+
+/* Reveal extension for new concept sections. */
+.motion-ready .reveal :is(.benefit-card,.launch-flow article,.proof-list article,.formats-shell,.proposal-form,.proposal-output){transition:opacity .68s ease,transform .76s var(--ease),background .3s ease}
+.motion-ready .reveal:not(.visible) :is(.benefit-card,.launch-flow article,.proof-list article,.formats-shell,.proposal-form){opacity:0;transform:translateY(18px)}
+.motion-ready .reveal.visible :is(.benefit-card,.launch-flow article,.proof-list article,.formats-shell,.proposal-form){opacity:1;transform:none}
+.motion-ready .reveal.visible .benefit-card:nth-child(2),.motion-ready .reveal.visible .launch-flow article:nth-child(2),.motion-ready .reveal.visible .proof-list article:nth-child(2){transition-delay:.07s}
+.motion-ready .reveal.visible .benefit-card:nth-child(3),.motion-ready .reveal.visible .launch-flow article:nth-child(3),.motion-ready .reveal.visible .proof-list article:nth-child(3){transition-delay:.13s}
+.motion-ready .reveal.visible .benefit-card:nth-child(4),.motion-ready .reveal.visible .launch-flow article:nth-child(4),.motion-ready .reveal.visible .proof-list article:nth-child(4){transition-delay:.19s}
+.motion-ready .reveal.visible .benefit-card:nth-child(5),.motion-ready .reveal.visible .launch-flow article:nth-child(5){transition-delay:.25s}
+.motion-ready .reveal.visible .benefit-card:nth-child(6),.motion-ready .reveal.visible .launch-flow article:nth-child(6){transition-delay:.31s}
+
+@media(max-width:1100px){
+  .benefits-head,.launch-heading,.proof-layout,.proposal-layout{grid-template-columns:1fr;gap:48px}
+  .benefits-lead,.launch-heading>p{max-width:760px}
+  .benefits-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .launch-flow{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .launch-flow article:nth-child(3){border-right:0}.launch-flow article:nth-child(-n+3){border-bottom:1px solid var(--line)}
+  .proof .section-heading,.proposal-intro{position:relative;top:auto;max-width:900px}
+  .formats-shell{grid-template-columns:1fr;gap:44px}
+}
+
+@media(max-width:760px){
+  .mobile-nav{max-height:calc(100dvh - 82px);overflow-y:auto;overscroll-behavior:contain}
+  .section-compact{padding-top:78px;padding-bottom:78px}
+  .benefits-head,.launch-heading,.proof-layout,.proposal-layout{gap:34px}
+  .benefits-lead{font-size:15px;line-height:1.62}
+  .benefits-grid{grid-template-columns:1fr;margin-top:50px;border-left:0}
+  .benefit-card{min-height:250px;padding:24px 21px;border-left:0}
+  .benefit-card h3{margin-top:42px;font-size:22px}
+  .benefit-card p{font-size:11.5px;line-height:1.68}
+  .launch-heading>p{font-size:11.5px;line-height:1.7}
+  .launch-flow{grid-template-columns:1fr;margin-top:50px;border-top:0}
+  .launch-flow article,.launch-flow article:nth-child(3),.launch-flow article:nth-child(-n+3){min-height:220px;padding:23px 20px;border-right:0;border-top:1px solid var(--line);border-bottom:0}
+  .launch-flow article:last-child{border-bottom:1px solid var(--line)}
+  .launch-flow h3{margin-top:38px;font-size:22px}
+  .launch-flow p{font-size:11px;line-height:1.66}
+  .school-actions{gap:16px}.school-text-link{font-size:9px}
+  .proof-list article{grid-template-columns:32px minmax(0,1fr);gap:14px;padding:25px 0}.proof-list article:hover{padding-left:0}
+  .proof-list h3{font-size:20px}.proof-list p{font-size:11px;line-height:1.68}
+  .formats-shell{margin-top:56px;padding:27px 21px;gap:34px}.formats-shell h3{font-size:30px}.formats-shell p{font-size:11px}
+  .formats-grid{grid-template-columns:1fr}.formats-grid span,.formats-grid span:nth-child(odd),.formats-grid span:nth-child(even){padding:15px 0;border-left:0;font-size:10.5px}
+  .mentor-note{grid-template-columns:1fr;gap:12px;margin-top:30px;padding:22px 0}.mentor-note strong{font-size:11.5px}
+  .proposal-intro h2{font-size:clamp(38px,11vw,52px)}.proposal-intro>p:last-of-type{margin-top:26px;font-size:11.5px}
+  .proposal-form{padding:23px 19px}.field-grid{grid-template-columns:1fr;gap:0}
+  .proposal-form label{margin-bottom:18px}.proposal-form input,.proposal-form textarea,.proposal-form select{font-size:11.5px;padding:14px}.proposal-form textarea{min-height:106px}
+  .proposal-output{padding:24px 20px;grid-template-columns:1fr;gap:22px}.proposal-output pre{font-size:9.5px;padding:18px}.proposal-output-actions{grid-column:1}
+}
+
+@media(max-width:360px){
+  .benefit-card{padding-inline:19px}.proposal-form{padding-inline:17px}.proposal-output{padding-inline:17px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .motion-ready .reveal :is(.benefit-card,.launch-flow article,.proof-list article,.formats-shell,.proposal-form){opacity:1!important;transform:none!important}
+}

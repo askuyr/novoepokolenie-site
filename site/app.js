@@ -192,6 +192,74 @@
     observedSections.forEach(section => navObserver.observe(section));
   }
 
+
+
+  const proposalForm = document.getElementById('proposalForm');
+  const proposalOutput = document.getElementById('proposalOutput');
+  const proposalText = document.getElementById('proposalText');
+  const copyProposal = document.getElementById('copyProposal');
+
+  if (proposalForm && proposalOutput && proposalText) {
+    const normalize = value => String(value || '').trim().replace(/\s+/g, ' ');
+
+    proposalForm.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!proposalForm.reportValidity()) return;
+
+      const data = new FormData(proposalForm);
+      const text = [
+        'ЗАЯВКА / НОВОЕ ПОКОЛЕНИЕ',
+        '',
+        `Имя: ${normalize(data.get('name'))}`,
+        `Кто я: ${normalize(data.get('role'))}`,
+        `Контакт: ${normalize(data.get('contact'))}`,
+        '',
+        `Идея: ${normalize(data.get('title'))}`,
+        '',
+        'Что хочу изменить:',
+        normalize(data.get('problem')),
+        '',
+        'Ожидаемый результат:',
+        normalize(data.get('result'))
+      ].join('\n');
+
+      proposalText.textContent = text;
+      proposalOutput.hidden = false;
+      proposalOutput.classList.remove('is-copied');
+      requestAnimationFrame(() => {
+        proposalOutput.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'nearest' });
+      });
+    });
+
+    copyProposal?.addEventListener('click', async () => {
+      const text = proposalText.textContent || '';
+      if (!text) return;
+      let copied = false;
+      try {
+        await navigator.clipboard.writeText(text);
+        copied = true;
+      } catch (_) {
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        copied = document.execCommand('copy');
+        area.remove();
+      }
+      if (copied) {
+        proposalOutput.classList.add('is-copied');
+        const original = copyProposal.childNodes[0]?.nodeValue || 'Скопировать ';
+        copyProposal.childNodes[0].nodeValue = 'Скопировано ';
+        window.setTimeout(() => {
+          copyProposal.childNodes[0].nodeValue = original;
+          proposalOutput.classList.remove('is-copied');
+        }, 1800);
+      }
+    });
+  }
   if (!prefersReduced && finePointer) {
     window.addEventListener('pointermove', event => {
       const x = (event.clientX / window.innerWidth - 0.5) * 28;

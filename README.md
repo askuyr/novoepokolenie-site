@@ -10,9 +10,11 @@
 </p>
 
 <p align="center">
-  <a href="https://askuyr.github.io/cuddly-octo-spork/">Открыть сайт</a>
+  <a href="https://askuyr.github.io/novoepokolenie-site/">Открыть сайт</a>
   ·
-  <a href="https://askuyr.github.io/cuddly-octo-spork/brandbook/">Брендбук</a>
+  <a href="https://askuyr.github.io/novoepokolenie-site/brandbook/">Брендбук</a>
+  ·
+  <a href="https://github.com/askuyr/novoepokolenie-site">Репозиторий</a>
 </p>
 
 ---
@@ -117,7 +119,7 @@ Workflow публикует содержимое папки `site/`, поэто�
 
 Текущая опубликованная версия:
 
-**https://askuyr.github.io/cuddly-octo-spork/**
+**https://askuyr.github.io/novoepokolenie-site/**
 
 ## Как обновлять сайт
 
@@ -140,7 +142,7 @@ Workflow публикует содержимое папки `site/`, поэто�
 
 - Не удаляйте `.github/workflows/pages.yml`, если хотите сохранить автоматический деплой.
 - Не переносите содержимое `site/` без одновременного изменения `path` в workflow.
-- Сохраняйте относительные пути к ресурсам — благодаря этому сайт корректно работает по адресу проекта GitHub Pages вида `/cuddly-octo-spork/`.
+- Сохраняйте относительные пути к ресурсам — благодаря этому сайт корректно работает по адресу проекта GitHub Pages вида `/novoepokolenie-site/`.
 - Если подключается собственный домен, удобнее сделать это через **Settings → Pages → Custom domain**.
 
 ---

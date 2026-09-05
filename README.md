@@ -1,153 +1,30 @@
-<p align="center">
-  <img src="site/assets/logo-main.png" alt="Новое поколение" width="180">
-</p>
-
-<h1 align="center">Новое поколение</h1>
-
-<p align="center">
-  Сайт молодёжной организации и открытой платформы.<br>
-  <strong>Не ждать перемен. Создавать их.</strong>
-</p>
-
-<p align="center">
-  <a href="https://askuyr.github.io/novoepokolenie-site/">Открыть сайт</a>
-  ·
-  <a href="https://askuyr.github.io/novoepokolenie-site/brandbook/">Брендбук</a>
-  ·
-  <a href="https://github.com/askuyr/novoepokolenie-site">Репозиторий</a>
-</p>
-
----
-
-## О проекте
-
-**«Новое поколение»** — цифровая площадка, которая знакомит с организацией, её направлениями, командой и возможностями участия.
-
-Сайт собран как лёгкий статический проект без CMS и обязательной сборки: его можно открыть локально, разместить на обычном хостинге или публиковать напрямую через GitHub Pages.
-
-## Что есть на сайте
-
-- адаптивная главная страница;
-- страницы пяти направлений:
-  - Молодёжное движение;
-  - Женское движение;
-  - Волонтёрский отдел;
-  - Проектный отдел;
-  - Медиа-отдел;
-- отдельная страница контактов;
-- интерактивный брендбук;
-- цикличная бегущая строка;
-- анимированная смена фирменных изображений в первом экране;
-- мобильное меню;
-- плавная навигация по странице и возврат наверх по клику на логотип;
-- адаптация под десктоп, планшет и мобильные экраны;
-- автоматическая публикация через GitHub Actions.
-
-## Технологии
-
-Проект намеренно оставлен простым и независимым от фреймворков:
-
-- HTML5;
-- CSS3;
-- Vanilla JavaScript;
-- локальные шрифты и изображения;
-- GitHub Actions;
-- GitHub Pages.
-
-Никакие `npm install`, Node.js или отдельный build-step для запуска сайта не требуются.
-
-## Структура проекта
-
-```text
-.
-├── .github/
-│   └── workflows/
-│       └── pages.yml          # публикация GitHub Pages
-├── site/
-│   ├── assets/                # изображения, логотипы, шрифты, favicon
-│   ├── brandbook/
-│   │   └── index.html         # брендбук
-│   ├── index.html             # главная страница
-│   ├── contacts.html          # контакты
-│   ├── youth-movement.html    # молодёжное движение
-│   ├── women-movement.html    # женское движение
-│   ├── volunteer-department.html
-│   ├── project-department.html
-│   ├── media-department.html
-│   ├── styles.css             # стили главной страницы
-│   ├── direction.css          # стили страниц направлений
-│   ├── app.js                 # интерактивность и анимации
-│   └── .nojekyll
-├── .gitignore
-└── README.md
-```
-
-## Локальный запуск
-
-Самый простой вариант — запустить локальный статический сервер из корня репозитория:
-
-```bash
-python3 -m http.server 8000 --directory site
-```
-
-После этого сайт будет доступен по адресу:
-
-```text
-http://localhost:8000/
-```
-
-Для простых правок можно открыть `site/index.html` напрямую в браузере, но локальный сервер лучше воспроизводит поведение опубликованной версии.
-
-## Публикация на GitHub Pages
-
-В репозитории уже есть готовый workflow:
-
-```text
-.github/workflows/pages.yml
-```
-
-Для публикации:
-
-1. Загрузите **всё содержимое проекта** в корень репозитория, включая скрытую папку `.github`.
-2. Убедитесь, что основная ветка называется `main`.
-3. Откройте **Settings → Pages**.
-4. В **Build and deployment → Source** выберите **GitHub Actions**.
-5. Сделайте commit/push в `main`.
-6. Дождитесь зелёного статуса workflow во вкладке **Actions**.
-
-Workflow публикует содержимое папки `site/`, поэтому `README.md` и служебные файлы репозитория на сайт не попадают.
-
-Текущая опубликованная версия:
-
-**https://askuyr.github.io/novoepokolenie-site/**
-
-## Как обновлять сайт
-
-Для большинства изменений достаточно этих файлов:
-
-| Что меняем | Где искать |
-| --- | --- |
-| Тексты и секции главной | `site/index.html` |
-| Стили главной | `site/styles.css` |
-| Анимации и интерактивность | `site/app.js` |
-| Страницы направлений | `site/*-movement.html`, `site/*-department.html` |
-| Общие стили направлений | `site/direction.css` |
-| Контакты | `site/contacts.html` |
-| Изображения и логотипы | `site/assets/` |
-| Брендбук | `site/brandbook/index.html` |
-
-После любого commit в `main` GitHub Actions автоматически запускает новую публикацию.
-
-## Важное перед публикацией
-
-- Не удаляйте `.github/workflows/pages.yml`, если хотите сохранить автоматический деплой.
-- Не переносите содержимое `site/` без одновременного изменения `path` в workflow.
-- Сохраняйте относительные пути к ресурсам — благодаря этому сайт корректно работает по адресу проекта GitHub Pages вида `/novoepokolenie-site/`.
-- Если подключается собственный домен, удобнее сделать это через **Settings → Pages → Custom domain**.
-
----
-
-<p align="center">
-  <strong>Новое поколение</strong><br>
-  От участия — к влиянию.
-</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://askuyr.github.io/novoepokolenie-site/</loc>
+  </url>
+  <url>
+    <loc>https://askuyr.github.io/novoepokolenie-site/school.html</loc>
+  </url>
+  <url>
+    <loc>https://askuyr.github.io/novoepokolenie-site/contacts.html</loc>
+  </url>
+  <url>
+    <loc>https://askuyr.github.io/novoepokolenie-site/youth-movement.html</loc>
+  </url>
+  <url>
+    <loc>https://askuyr.github.io/novoepokolenie-site/women-movement.html</loc>
+  </url>
+  <url>
+    <loc>https://askuyr.github.io/novoepokolenie-site/volunteer-department.html</loc>
+  </url>
+  <url>
+    <loc>https://askuyr.github.io/novoepokolenie-site/project-department.html</loc>
+  </url>
+  <url>
+    <loc>https://askuyr.github.io/novoepokolenie-site/media-department.html</loc>
+  </url>
+  <url>
+    <loc>https://askuyr.github.io/novoepokolenie-site/brandbook/</loc>
+  </url>
+</urlset>

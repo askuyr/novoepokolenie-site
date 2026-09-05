@@ -1372,15 +1372,18 @@ body{letter-spacing:-.008em}
 @media(prefers-reduced-motion:reduce){.faq-item[open] .faq-answer{animation:none!important}.faq-toggle,.faq-toggle::before,.faq-toggle::after{transition:none!important}}
 
 
-/* Personal data notice: local-only form + Russian Federal Law No. 152-FZ */
-.proposal-law{position:relative;z-index:1;margin-top:18px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;max-width:760px;padding:16px 17px;border:1px solid rgba(241,218,191,.14);border-radius:18px;background:linear-gradient(135deg,rgba(241,218,191,.045),rgba(255,255,255,.012));color:rgba(255,251,255,.58)}
-.proposal-law-badge{display:grid;place-items:center;min-width:58px;height:30px;padding:0 9px;border:1px solid rgba(241,218,191,.22);border-radius:999px;background:rgba(241,218,191,.055);color:var(--almond);font-size:8px;font-weight:680;letter-spacing:.07em;white-space:nowrap}
-.proposal-law-copy{min-width:0}
-.proposal-law-copy strong{display:block;margin:1px 0 7px;color:rgba(255,251,255,.86);font-size:10px;line-height:1.35;font-weight:620;letter-spacing:-.02em}
-.proposal-law-copy p{margin:0;color:rgba(255,251,255,.48);font-size:8.5px;line-height:1.62}
-.proposal-law-copy p+p{margin-top:7px}
-.proposal-law-copy a{display:inline-flex;align-items:center;gap:7px;margin-top:10px;color:rgba(241,218,191,.78);font-size:8.5px;line-height:1.3;text-decoration:none;border-bottom:1px solid rgba(241,218,191,.24);padding-bottom:2px;transition:color .22s ease,border-color .22s ease}
-.proposal-law-copy a:hover{color:var(--almond);border-color:rgba(241,218,191,.58)}
-.proposal-law-copy a:focus-visible{border-radius:4px}
-@media(max-width:760px){.proposal-law{grid-template-columns:1fr;gap:11px;padding:15px}.proposal-law-badge{justify-self:start}.proposal-law-copy strong{font-size:10.5px}.proposal-law-copy p,.proposal-law-copy a{font-size:9px}}
-@media(prefers-reduced-motion:reduce){.proposal-law-copy a{transition:none}}
+/* Personal data notice: compact legal footnote */
+.proposal-law-inline{margin-top:9px;max-width:680px;color:rgba(255,251,255,.34);font-size:8.5px;line-height:1.55;letter-spacing:.005em}
+.proposal-law-inline strong{color:rgba(241,218,191,.58);font-size:inherit;font-weight:650}
+.proposal-law-inline a{color:rgba(241,218,191,.56);font-size:inherit;text-decoration:none;border-bottom:1px solid rgba(241,218,191,.20);padding-bottom:1px;transition:color .22s ease,border-color .22s ease}
+.proposal-law-inline a:hover{color:var(--almond);border-color:rgba(241,218,191,.48)}
+.proposal-law-inline a:focus-visible{border-radius:3px}
+@media(max-width:760px){.proposal-law-inline{margin-top:8px;font-size:8px;line-height:1.58}}
+@media(prefers-reduced-motion:reduce){.proposal-law-inline a{transition:none}}
+
+/* Word proposal generation state */
+.proposal-submit:disabled{cursor:wait;opacity:.72;transform:none!important}
+.proposal-submit[aria-busy="true"] span{animation:proposalDownloadPulse 1s ease-in-out infinite}
+.proposal-file-pill span{min-width:42px;text-align:center}
+@keyframes proposalDownloadPulse{50%{opacity:.36;transform:translateY(2px)}}
+@media(prefers-reduced-motion:reduce){.proposal-submit[aria-busy="true"] span{animation:none!important}}

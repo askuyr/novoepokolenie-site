@@ -219,3 +219,28 @@ a.direction-item{color:inherit;text-decoration:none;cursor:pointer}
   .direction-manifest-card h2{font-size:36px}
   .manifest-tags span{padding-inline:10px}
 }
+
+
+/* ===== Final direction typography alignment ===== */
+.direction-page .hero h1{font-weight:700;line-height:.91;letter-spacing:-.052em}
+.direction-page .hero-lead{font-weight:300;letter-spacing:-.012em}
+.direction-card-label,.direction-card-copy span,.activity-top,.direction-nav a span{font-size:9px}
+.direction-card-copy strong{font-weight:700;letter-spacing:-.045em;line-height:1.06}
+.direction-purpose{font-weight:400;letter-spacing:-.035em;line-height:1.32}
+.direction-purpose-note{font-size:12.5px;line-height:1.7}
+.activity-card h3{font-weight:600;letter-spacing:-.045em;line-height:1.06}
+.activity-card p{font-size:12.5px;line-height:1.68;font-weight:300}
+.activity-card .activity-detail{font-size:9.5px;line-height:1.62}
+.manifest-copy p{font-size:13.5px;line-height:1.72}
+.direction-nav a strong{font-size:13.5px;line-height:1.28;font-weight:500}
+
+@media(max-width:760px){
+  .direction-page .hero h1{line-height:.94;letter-spacing:-.045em}
+  .direction-page .hero-lead{font-size:15px;line-height:1.68}
+  .direction-purpose{font-size:20px;line-height:1.38}
+  .direction-purpose-note{font-size:11.5px}
+  .activity-card p{font-size:11.5px}
+  .activity-card .activity-detail{font-size:9px}
+  .manifest-copy p{font-size:11.5px}
+  .direction-nav a strong{font-size:13px}
+}

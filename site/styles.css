@@ -1310,3 +1310,84 @@ body{letter-spacing:-.008em}
 .contact-page .section-heading h1 em{font-family:"Ostrovsky",Georgia,serif;font-weight:700;font-style:normal;letter-spacing:-.045em;color:var(--almond)}
 @media(max-width:760px){.contact-page .section-heading h1{margin-top:20px;font-size:clamp(38px,10.7vw,54px);line-height:.95}}
 @media(max-width:390px){.contact-page .section-heading h1{font-size:clamp(34px,10.6vw,42px)}}
+
+
+/* ===== FAQ: calm native accordion, accessible without JavaScript. ===== */
+.faq-layout{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:clamp(76px,9vw,146px);align-items:start}
+.faq-layout>*{min-width:0}
+.faq-intro{position:sticky;top:116px}
+.faq-intro .heading-note{margin:26px 0 0;max-width:500px;color:rgba(255,251,255,.58);font-size:12px;line-height:1.72}
+.faq-intro .school-text-link{display:inline-block;margin-top:30px;color:rgba(241,218,191,.72);text-decoration-color:rgba(241,218,191,.26)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line);background:transparent;transition:background .28s ease}
+.faq-item[open]{background:linear-gradient(90deg,rgba(241,218,191,.035),transparent 74%)}
+.faq-item summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px minmax(0,1fr) 34px;gap:22px;align-items:center;padding:28px 0;color:var(--snow);user-select:none;-webkit-tap-highlight-color:transparent}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-index{font-size:9px;line-height:1;color:rgba(241,218,191,.48);font-variant-numeric:tabular-nums}
+.faq-question{font-size:clamp(17px,1.55vw,23px);line-height:1.22;letter-spacing:-.035em;font-weight:580}
+.faq-toggle{position:relative;width:30px;height:30px;border:1px solid rgba(241,218,191,.16);border-radius:50%;transition:transform .35s var(--ease),border-color .25s ease,background .25s ease}
+.faq-toggle::before,.faq-toggle::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1px;background:var(--almond);transform:translate(-50%,-50%);transition:transform .35s var(--ease),opacity .25s ease}
+.faq-toggle::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-item[open] .faq-toggle{transform:rotate(180deg);background:rgba(241,218,191,.08);border-color:rgba(241,218,191,.34)}
+.faq-item[open] .faq-toggle::after{opacity:0;transform:translate(-50%,-50%) rotate(0deg)}
+.faq-answer{padding:0 58px 30px 66px;max-width:780px}
+.faq-answer p{margin:0;color:rgba(255,251,255,.62);font-size:12.5px;line-height:1.78}
+.faq-item[open] .faq-answer{animation:faqAnswerIn .38s var(--ease) both}
+.faq-item summary:hover .faq-question{color:var(--almond)}
+.faq-item summary:hover .faq-toggle{border-color:rgba(241,218,191,.38)}
+.faq-item summary:focus-visible{outline:2px solid var(--almond);outline-offset:7px;border-radius:5px}
+@keyframes faqAnswerIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.motion-ready .reveal:not(.visible) .faq-list{opacity:0;transform:translateY(18px)}
+.motion-ready .reveal.visible .faq-list{opacity:1;transform:none;transition:opacity .7s ease .12s,transform .8s var(--ease) .12s}
+
+/* ===== Branded GitHub Pages 404. ===== */
+.error-page{min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:#000500;color:var(--snow)}
+.error-page .site-header{position:relative;top:0;background:linear-gradient(180deg,rgba(0,5,0,.94),rgba(0,5,0,.54) 72%,transparent);border-bottom:0}
+.error-page .nav-shell{border-bottom:1px solid rgba(241,218,191,.11)}
+.error-main{position:relative;z-index:2;flex:1;display:grid;align-items:center;padding-top:clamp(72px,7vw,112px);padding-bottom:clamp(76px,8vw,126px)}
+.error-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(420px,.72fr);gap:clamp(68px,10vw,170px);align-items:center}
+.error-copy{min-width:0}
+.error-copy .eyebrow{color:rgba(241,218,191,.58)}
+.error-copy h1{margin:22px 0 0;font-size:clamp(54px,7.4vw,112px);line-height:.88;letter-spacing:-.075em;font-weight:680;max-width:900px}
+.error-copy h1 em{font-family:"Ostrovsky",Georgia,serif;font-style:normal;font-weight:700;color:var(--almond);letter-spacing:-.052em}
+.error-copy>p:not(.eyebrow){margin:32px 0 0;max-width:620px;color:rgba(255,251,255,.61);font-size:clamp(13px,1.1vw,16px);line-height:1.7}
+.error-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.error-art{position:relative;min-height:clamp(420px,45vw,650px);display:grid;place-items:center;border:1px solid rgba(241,218,191,.12);border-radius:40px;overflow:hidden;background:radial-gradient(circle at 50% 38%,rgba(241,218,191,.09),transparent 31%),linear-gradient(145deg,rgba(255,255,255,.018),rgba(54,36,23,.12))}
+.error-art::before,.error-art::after{content:"";position:absolute;border:1px solid rgba(241,218,191,.10);border-radius:50%;pointer-events:none}
+.error-art::before{width:72%;aspect-ratio:1;right:-24%;top:8%}
+.error-art::after{width:46%;aspect-ratio:1;left:-17%;bottom:-17%}
+.error-code{position:relative;z-index:2;font-family:"Unbounded",sans-serif;font-size:clamp(88px,14vw,220px);line-height:.72;font-weight:700;letter-spacing:-.09em;color:transparent;-webkit-text-stroke:1px rgba(241,218,191,.34);text-shadow:0 20px 80px rgba(0,0,0,.3)}
+.error-mark{position:absolute;z-index:3;left:10%;right:10%;bottom:12%;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:14px;padding:14px 18px;border:1px solid rgba(241,218,191,.16);border-radius:999px;background:rgba(0,5,0,.66);backdrop-filter:blur(16px);font-size:8px;color:rgba(255,251,255,.66)}
+.error-mark b{color:var(--almond);font-weight:500}
+.error-page .site-footer{position:relative;z-index:2}
+
+@media(max-width:900px){
+  .faq-layout{grid-template-columns:1fr;gap:52px}.faq-intro{position:static}.faq-intro .heading-note{max-width:620px}
+  .error-grid{grid-template-columns:1fr;gap:52px}.error-art{min-height:420px}.error-copy h1{max-width:720px}
+}
+@media(max-width:660px){
+  .faq-item summary{grid-template-columns:30px minmax(0,1fr) 28px;gap:12px;padding:23px 0}.faq-index{font-size:8px}.faq-question{font-size:16px;line-height:1.3}.faq-toggle{width:28px;height:28px}.faq-answer{padding:0 40px 24px 42px}.faq-answer p{font-size:11.5px;line-height:1.72}
+  .error-main{padding-top:60px;padding-bottom:72px}.error-copy h1{font-size:clamp(48px,15vw,72px);line-height:.9}.error-copy>p:not(.eyebrow){margin-top:24px;font-size:12px}.error-actions{margin-top:28px}.error-actions .button{width:100%;justify-content:space-between}.error-art{min-height:330px;border-radius:28px}.error-code{font-size:clamp(92px,35vw,150px)}.error-mark{left:7%;right:7%;bottom:8%;padding:12px 13px;gap:8px;font-size:7px}
+}
+@media(prefers-reduced-motion:reduce){.faq-item[open] .faq-answer{animation:none!important}.faq-toggle,.faq-toggle::before,.faq-toggle::after{transition:none!important}}
+
+
+/* Personal data notice: local-only form + Russian Federal Law No. 152-FZ */
+.proposal-law{position:relative;z-index:1;margin-top:18px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;max-width:760px;padding:16px 17px;border:1px solid rgba(241,218,191,.14);border-radius:18px;background:linear-gradient(135deg,rgba(241,218,191,.045),rgba(255,255,255,.012));color:rgba(255,251,255,.58)}
+.proposal-law-badge{display:grid;place-items:center;min-width:58px;height:30px;padding:0 9px;border:1px solid rgba(241,218,191,.22);border-radius:999px;background:rgba(241,218,191,.055);color:var(--almond);font-size:8px;font-weight:680;letter-spacing:.07em;white-space:nowrap}
+.proposal-law-copy{min-width:0}
+.proposal-law-copy strong{display:block;margin:1px 0 7px;color:rgba(255,251,255,.86);font-size:10px;line-height:1.35;font-weight:620;letter-spacing:-.02em}
+.proposal-law-copy p{margin:0;color:rgba(255,251,255,.48);font-size:8.5px;line-height:1.62}
+.proposal-law-copy p+p{margin-top:7px}
+.proposal-law-copy a{display:inline-flex;align-items:center;gap:7px;margin-top:10px;color:rgba(241,218,191,.78);font-size:8.5px;line-height:1.3;text-decoration:none;border-bottom:1px solid rgba(241,218,191,.24);padding-bottom:2px;transition:color .22s ease,border-color .22s ease}
+.proposal-law-copy a:hover{color:var(--almond);border-color:rgba(241,218,191,.58)}
+.proposal-law-copy a:focus-visible{border-radius:4px}
+@media(max-width:760px){.proposal-law{grid-template-columns:1fr;gap:11px;padding:15px}.proposal-law-badge{justify-self:start}.proposal-law-copy strong{font-size:10.5px}.proposal-law-copy p,.proposal-law-copy a{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.proposal-law-copy a{transition:none}}
+
+/* Word proposal generation state */
+.proposal-submit:disabled{cursor:wait;opacity:.72;transform:none!important}
+.proposal-submit[aria-busy="true"] span{animation:proposalDownloadPulse 1s ease-in-out infinite}
+.proposal-file-pill span{min-width:42px;text-align:center}
+@keyframes proposalDownloadPulse{50%{opacity:.36;transform:translateY(2px)}}
+@media(prefers-reduced-motion:reduce){.proposal-submit[aria-busy="true"] span{animation:none!important}}

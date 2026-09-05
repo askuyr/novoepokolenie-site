@@ -244,12 +244,14 @@
 
   if (proposalForm && proposalOutput && proposalText) {
     const normalize = value => String(value || '').trim().replace(/\s+/g, ' ');
+    const normalizeMultiline = value => String(value || '').trim().replace(/\r\n?/g, '\n');
     let proposalBlob = null;
     let proposalFilename = '';
+    let proposalPlainText = '';
 
     const safeFilenamePart = value => {
       const cleaned = normalize(value)
-        .replace(/[<>:"/\\|?*\u0000-\u001F]/g, '')
+        .replace(/[<>:\"/\\|?*\u0000-\u001F]/g, '')
         .replace(/[. ]+$/g, '')
         .replace(/\s+/g, '-')
         .replace(/-+/g, '-')
@@ -267,58 +269,84 @@
       document.body.appendChild(anchor);
       anchor.click();
       anchor.remove();
-      window.setTimeout(() => URL.revokeObjectURL(url), 1200);
+      window.setTimeout(() => URL.revokeObjectURL(url), 1600);
       proposalOutput.classList.add('is-downloaded');
       window.setTimeout(() => proposalOutput.classList.remove('is-downloaded'), 1800);
     };
 
-    proposalForm.addEventListener('submit', event => {
+    proposalForm.addEventListener('submit', async event => {
       event.preventDefault();
       if (!proposalForm.reportValidity()) return;
 
-      const data = new FormData(proposalForm);
-      const title = normalize(data.get('title'));
-      const date = new Intl.DateTimeFormat('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date());
-      const text = [
-        'НОВОЕ ПОКОЛЕНИЕ',
-        'ЗАЯВКА НА ПРОЕКТ',
-        '────────────────────────────────',
-        '',
-        `ПРОЕКТ: ${title}`,
-        `Сформировано: ${date}`,
-        '',
-        `Имя: ${normalize(data.get('name'))}`,
-        `Кто я: ${normalize(data.get('role'))}`,
-        `Контакт: ${normalize(data.get('contact'))}`,
-        '',
-        'ЧТО ХОЧУ ИЗМЕНИТЬ',
-        normalize(data.get('problem')),
-        '',
-        'ОЖИДАЕМЫЙ РЕЗУЛЬТАТ',
-        normalize(data.get('result')),
-        '',
-        '────────────────────────────────',
-        'Сформировано на сайте «Новое поколение»',
-        'https://askuyr.github.io/novoepokolenie-site/'
-      ].join('\n');
+      const submitButton = proposalForm.querySelector('.proposal-submit');
+      const submitText = submitButton ? submitButton.childNodes[0]?.nodeValue : '';
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.setAttribute('aria-busy', 'true');
+        if (submitButton.childNodes[0]) submitButton.childNodes[0].nodeValue = 'Формируем Word-файл ';
+      }
 
-      proposalFilename = `Новое-поколение_${safeFilenamePart(title)}.txt`;
-      proposalBlob = new Blob(['\uFEFF', text], { type: 'text/plain;charset=utf-8' });
-      proposalText.textContent = text;
-      if (proposalFileName) proposalFileName.textContent = proposalFilename;
-      proposalOutput.hidden = false;
-      proposalOutput.classList.remove('is-copied');
+      try {
+        if (!window.NPProposalDocx?.buildProposalDocx) throw new Error('DOCX generator is unavailable');
+        const data = new FormData(proposalForm);
+        const title = normalize(data.get('title'));
+        const date = new Intl.DateTimeFormat('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date());
+        const proposalData = {
+          title,
+          name: normalize(data.get('name')),
+          role: normalize(data.get('role')),
+          contact: normalize(data.get('contact')),
+          problem: normalizeMultiline(data.get('problem')),
+          result: normalizeMultiline(data.get('result')),
+          date
+        };
 
-      downloadFile();
-      requestAnimationFrame(() => {
-        proposalOutput.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'nearest' });
-      });
+        proposalPlainText = [
+          'НОВОЕ ПОКОЛЕНИЕ — ПРОЕКТНАЯ ЗАЯВКА',
+          '',
+          `Проект: ${proposalData.title}`,
+          `Дата: ${proposalData.date}`,
+          `Автор: ${proposalData.name}`,
+          `Роль: ${proposalData.role}`,
+          `Контакт: ${proposalData.contact}`,
+          '',
+          'Что хотим изменить:',
+          proposalData.problem,
+          '',
+          'Ожидаемый результат:',
+          proposalData.result,
+          '',
+          'Сформировано на сайте «Новое поколение»',
+          'https://askuyr.github.io/novoepokolenie-site/'
+        ].join('\n');
+
+        proposalBlob = await window.NPProposalDocx.buildProposalDocx(proposalData);
+        proposalFilename = `Новое-поколение_${safeFilenamePart(title)}.docx`;
+        proposalText.textContent = proposalPlainText;
+        if (proposalFileName) proposalFileName.textContent = proposalFilename;
+        proposalOutput.hidden = false;
+        proposalOutput.classList.remove('is-copied');
+
+        downloadFile();
+        requestAnimationFrame(() => {
+          proposalOutput.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'nearest' });
+        });
+      } catch (error) {
+        console.error('Не удалось сформировать Word-файл:', error);
+        window.alert('Не удалось сформировать Word-файл. Обновите страницу и попробуйте ещё раз.');
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.removeAttribute('aria-busy');
+          if (submitButton.childNodes[0]) submitButton.childNodes[0].nodeValue = submitText || 'Сформировать и скачать ';
+        }
+      }
     });
 
     downloadProposal?.addEventListener('click', downloadFile);
 
     copyProposal?.addEventListener('click', async () => {
-      const text = proposalText.textContent || '';
+      const text = proposalPlainText || proposalText.textContent || '';
       if (!text) return;
       let copied = false;
       try {

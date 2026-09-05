@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+
+<!-- GitHub Pages build: original logo assets and user-supplied Girlo SP / Ostrovsky fonts are stored locally in assets/. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#000500" name="theme-color"/>
+<title>Новое поколение — Brand Identity Case</title>
+<link rel="icon" href="assets/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="assets/favicon.png"/>
+<link rel="apple-touch-icon" href="assets/favicon.png"/>
+<meta content="Веб-презентация фирменного стиля «Новое поколение»: символика, палитра, типографика и мерч." name="description"/>
+<link rel="preload" href="assets/fonts/Unbounded-Variable.ttf" as="font" type="font/ttf" crossorigin/>
+<link rel="preload" href="assets/tote.webp" as="image" type="image/webp" fetchpriority="high"/>
+<style>
+    @font-face{
+      font-family:"Unbounded";
+      src:url("assets/fonts/Unbounded-Variable.ttf") format("truetype");
+      font-weight:200 900;
+      font-style:normal;
+      font-display:swap;
+    }
+    @font-face{
+      font-family:"Unbounded";
+      src:url("assets/fonts/Unbounded-Regular.ttf") format("truetype");
+      font-weight:400;
+      font-style:normal;
+      font-display:swap;
+    }
+    @font-face{
+      font-family:"Unbounded";
+      src:url("assets/fonts/Unbounded-Medium.ttf") format("truetype");
+      font-weight:500;
+      font-style:normal;
+      font-display:swap;
+    }
+    @font-face{
+      font-family:"Unbounded";
+      src:url("assets/fonts/Unbounded-SemiBold.ttf") format("truetype");
+      font-weight:600;
+      font-style:normal;
+      font-display:swap;
+    }
+    @font-face{
+      font-family:"Unbounded";
+      src:url("assets/fonts/Unbounded-Bold.ttf") format("truetype");
+      font-weight:700;
+      font-style:normal;
+      font-display:swap;
+    }
+    @font-face{
+      font-family:"Unbounded";
+      src:url("assets/fonts/Unbounded-ExtraBold.ttf") format("truetype");
+      font-weight:800;
+      font-style:normal;
+      font-display:swap;
+    }
+    @font-face{
+      font-family:"Girlo SP";
+      src:url("assets/fonts/GirloSP.otf") format("opentype");
+      font-weight:400;
+      font-style:normal;
+      font-display:swap;
+    }
+    @font-face{
+      font-family:"Ostrovsky";
+      src:url("assets/fonts/Ostrovsky-Bold.otf") format("opentype");
+      font-weight:700;
+      font-style:normal;
+      font-display:swap;
+    }
+    :root{
+      --black:#000500;
+      --snow:#fffbff;
+      --almond:#f1dabf;
+      --taupe:#92817a;
+      --coffee:#362417;
+      --line:rgba(241,218,191,.24);
+      --page:min(1440px, calc(100% - 40px));
+      --radius:28px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--black)}
+    body{
+      margin:0;background:var(--black);color:var(--snow);
+      font-family:"Unbounded",Arial,sans-serif;line-height:1.45;
+      overflow-x:hidden;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button,a{ -webkit-tap-highlight-color:transparent }
+    .container{width:var(--page);margin:0 auto}
+    .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);font-weight:600}
+    .display{font-size:clamp(44px,8vw,128px);line-height:.86;letter-spacing:-.055em;margin:0;font-weight:800}
+    .section-title{font-size:clamp(30px,4.2vw,66px);line-height:.96;letter-spacing:-.045em;margin:0;font-weight:700}
+    .muted{color:rgba(255,251,255,.62)}
+
+    .nav-wrap{position:fixed;z-index:50;left:0;right:0;top:0;padding:12px 0;pointer-events:none}
+    .nav{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:8px 12px 8px 14px;border:1px solid var(--line);background:rgba(0,5,0,.72);backdrop-filter:blur(18px);border-radius:999px;box-shadow:0 18px 60px rgba(0,0,0,.3)}
+    .nav-logo{display:block;height:34px!important;width:auto!important;max-width:180px;object-fit:contain;cursor:pointer}
+    .nav-links{display:flex;gap:22px;align-items:center;font-size:11px;color:rgba(255,251,255,.76)}
+    .nav-links a{transition:.2s ease}
+    .nav-links a:hover{color:var(--almond)}
+    .nav-actions{display:flex;align-items:center;gap:8px}
+    .nav-site{display:inline-flex;align-items:center;min-height:38px;padding:0 12px;border:1px solid var(--line);border-radius:999px;color:rgba(255,251,255,.72);font-size:10px;white-space:nowrap;transition:.2s ease}
+    .nav-site:hover{border-color:rgba(241,218,191,.45);color:var(--almond)}
+    .nav-cta{padding:10px 15px;border-radius:999px;background:var(--almond);color:var(--black);font-size:11px;font-weight:700}
+
+    .hero{min-height:100svh;display:grid;align-items:end;padding:150px 0 44px;position:relative;isolation:isolate}
+    .hero:before{content:"";position:absolute;inset:0;z-index:-2;background:
+      radial-gradient(ellipse at 78% 18%, rgba(146,129,122,.22), transparent 37%),
+      radial-gradient(ellipse at 10% 86%, rgba(54,36,23,.42), transparent 34%)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end}
+    .hero-copy{padding-bottom:10px}
+    .hero .display span{display:block;color:var(--almond)}
+    .hero-sub{max-width:720px;margin:28px 0 0;font-size:clamp(15px,1.5vw,21px);font-weight:400;color:rgba(255,251,255,.66)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:999px;border:1px solid var(--line);font-size:12px;font-weight:700;transition:.25s ease}
+    .btn.primary{background:var(--almond);color:var(--black);border-color:var(--almond)}
+    .btn:hover{transform:translateY(-2px);border-color:rgba(241,218,191,.65)}
+    .hero-visual{height:min(68vh,720px);min-height:500px;position:relative;border-radius:var(--radius);overflow:hidden;background:
+      radial-gradient(circle at 72% 18%,rgba(146,129,122,.16),transparent 34%),
+      linear-gradient(155deg,#0c0d0b 0%,#030603 58%,#000500 100%);border:1px solid var(--line);isolation:isolate}
+    .hero-visual:before{content:"VISUAL IDENTITY";position:absolute;z-index:4;left:24px;top:22px;padding:8px 11px;border:1px solid rgba(241,218,191,.22);border-radius:999px;background:rgba(0,5,0,.42);backdrop-filter:blur(10px);font-size:9px;letter-spacing:.14em;color:rgba(241,218,191,.72)}
+    .hero-visual:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0) 42%,rgba(0,5,0,.22) 60%,rgba(0,5,0,.96) 100%);pointer-events:none}
+    .hero-symbol{position:absolute;z-index:0;width:132%;left:-31%;bottom:-16%;opacity:.22;transform:rotate(-7deg);filter:drop-shadow(0 18px 40px rgba(0,0,0,.45));pointer-events:none}
+    .hero-card{position:absolute;z-index:2;left:50%;top:11%;width:66%;aspect-ratio:1/1.06;border-radius:26px;overflow:hidden;box-shadow:0 34px 90px rgba(0,0,0,.55);transform:translateX(-50%) rotate(1.5deg);border:1px solid rgba(241,218,191,.18);background:#1a1713}
+    .hero-card:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);pointer-events:none}
+    .hero-card img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+    .hero-card:hover img{transform:scale(1.035)}
+    .hero-label{position:absolute;z-index:4;left:24px;right:88px;bottom:22px;max-width:none;padding-top:15px;border-top:1px solid rgba(241,218,191,.18);font-family:Arial,sans-serif;font-size:12px;line-height:1.45;color:rgba(241,218,191,.82)}
+    .hero-label:before{content:"TOTE BAG / BRAND APPLICATION";display:block;margin-bottom:7px;font-family:"Unbounded",Arial,sans-serif;font-size:8px;letter-spacing:.12em;color:var(--taupe)}
+    .hero-index{position:absolute;z-index:4;right:24px;bottom:24px;font-size:10px;letter-spacing:.08em;color:var(--taupe)}
+
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:15px 0;color:var(--almond);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+    .ticker-track{display:inline-block;min-width:100%;padding-left:4vw;word-spacing:28px}
+
+    section{padding:108px 0}
+    .intro-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:72px;align-items:start}
+    .intro-symbol{position:sticky;top:120px;border:1px solid var(--line);border-radius:var(--radius);padding:50px;background:linear-gradient(145deg,#060906,#000500);min-height:420px;display:grid;place-items:center}
+    .intro-symbol img{width:95%;filter:drop-shadow(0 30px 45px rgba(0,0,0,.35))}
+    .intro-copy p{font-size:clamp(18px,2.2vw,33px);line-height:1.3;letter-spacing:-.03em;margin:26px 0 0;max-width:900px}
+    .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:50px}
+    .principle{min-height:190px;padding:24px;border:1px solid var(--line);border-radius:22px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.015)}
+    .principle strong{font-size:14px;color:var(--almond)}
+    .principle p{font-family:Arial,sans-serif;font-size:15px;line-height:1.55;margin:0;color:rgba(255,251,255,.57)}
+
+    .palette-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:42px}
+    .palette-head p{max-width:540px;margin:0;color:rgba(255,251,255,.58);font-family:Arial,sans-serif;font-size:16px;line-height:1.55}
+    .swatches{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:170px;gap:12px}
+    .swatch{border-radius:22px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(255,255,255,.12);overflow:hidden}
+    .swatch:nth-child(1){grid-column:span 4;background:var(--snow);color:var(--black)}
+    .swatch:nth-child(2){grid-column:span 5;background:var(--almond);color:var(--black)}
+    .swatch:nth-child(3){grid-column:span 3;background:var(--taupe);color:var(--black)}
+    .swatch:nth-child(4){grid-column:span 7;background:var(--coffee);color:var(--almond)}
+    .swatch:nth-child(5){grid-column:span 5;background:var(--black);color:var(--snow);border-color:rgba(255,251,255,.35)}
+    .swatch-name{font-size:18px;font-weight:700}
+    .swatch-code{font-family:Arial,sans-serif;font-size:13px;opacity:.76}
+
+    .logo-behavior{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .logo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:46px}
+    .logo-tile{border-radius:24px;min-height:330px;display:grid;place-items:center;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+    .logo-tile img{width:min(72%,520px);height:auto;position:relative;left:0;object-fit:contain;margin:auto}
+    .logo-tile small{position:absolute;left:20px;bottom:18px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+    .logo-tile.coffee{background:var(--coffee)}
+    .logo-tile.taupe{background:var(--taupe)}
+    .logo-tile.black{background:var(--black);border-color:transparent}
+    .logo-tile.snow{background:var(--snow);color:var(--black)}
+
+    .type-stage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:44px}
+    .type-card{position:relative;border:1px solid var(--line);border-radius:var(--radius);min-height:330px;padding:28px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:34px;background:linear-gradient(145deg,rgba(255,255,255,.018),rgba(255,255,255,.006));color:var(--snow)}
+    .type-card:after{content:"";position:absolute;left:28px;right:28px;bottom:22px;height:1px;background:linear-gradient(90deg,var(--almond),transparent);opacity:.2;pointer-events:none}
+    .type-card.big{grid-column:auto;min-height:330px;background:linear-gradient(145deg,rgba(241,218,191,.12),rgba(241,218,191,.025));color:var(--snow)}
+    .type-card .sample{position:relative;z-index:1;display:flex;align-items:flex-end;min-height:150px;margin:0;font-size:clamp(42px,5.5vw,82px);overflow:visible;white-space:nowrap;color:var(--snow)}
+    /* Unbounded: no Google Fonts dependency. The proportions are tuned to sit in the same visual rhythm as Girlo/Ostrovsky. */
+    .type-card.big .sample{font-family:"Arial Black","Arial Narrow",Arial,sans-serif;font-weight:900;letter-spacing:-.075em;line-height:.88;transform:scaleX(.88);transform-origin:left bottom;text-transform:lowercase}
+    .type-card.serif .sample{font-family:"Ostrovsky",Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(38px,5.15vw,76px);letter-spacing:-.025em;line-height:.9}
+    .type-card.line .sample{font-family:"Girlo SP",Arial,sans-serif;font-weight:400;letter-spacing:0;line-height:.9;text-transform:none;transform:none}
+    .type-meta{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:18px;font-size:10px;text-transform:uppercase;letter-spacing:.14em;opacity:.62}
+    .type-meta span:last-child{color:var(--almond);opacity:1}
+
+    .merch-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
+    .merch-note{max-width:460px;font-family:Arial,sans-serif;font-size:16px;line-height:1.55;color:rgba(255,251,255,.58);margin:0}
+    .merch-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;grid-auto-flow:dense}
+    .merch-card{position:relative;overflow:hidden;border-radius:26px;min-height:380px;background:#15120f;border:1px solid rgba(255,255,255,.07)}
+    .merch-card:nth-child(1),.merch-card:nth-child(4){grid-column:span 5}
+    .merch-card:nth-child(2),.merch-card:nth-child(3){grid-column:span 7}
+    .merch-card:nth-child(5),.merch-card:nth-child(6),.merch-card:nth-child(7),.merch-card:nth-child(8){grid-column:span 3;min-height:330px}
+    .merch-card img{width:100%;height:100%;object-fit:cover;image-rendering:auto;transition:transform .55s cubic-bezier(.2,.7,.2,1);backface-visibility:hidden}
+    .merch-card:hover img{transform:scale(1.035)}
+    .merch-card .caption{position:absolute;left:18px;right:18px;bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border-radius:999px;background:rgba(0,5,0,.72);backdrop-filter:blur(12px);font-size:11px;border:1px solid rgba(255,255,255,.1)}
+    .merch-card .caption span:last-child{color:var(--taupe)}
+
+    #brandbook{scroll-margin-top:96px}
+    .brandbook-image-wrap{border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#050705;cursor:zoom-in}
+    .brandbook-image-wrap img{display:block;width:100%;height:auto;opacity:1}
+
+
+    .contacts{padding:96px 0;border-top:1px solid var(--line)}
+    .contacts-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:32px;padding:clamp(28px,5vw,64px);background:linear-gradient(135deg,rgba(54,36,23,.52),rgba(0,5,0,.96));display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end}
+    .contacts-card:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-150px;top:-220px;background:rgba(241,218,191,.08);filter:blur(2px);pointer-events:none}
+    .contacts-copy{position:relative;z-index:1}
+    .contacts-copy p{max-width:680px;margin:20px 0 0;color:rgba(255,251,255,.62);font-size:16px;line-height:1.6}
+    .contacts-links{position:relative;z-index:1;display:grid;gap:12px}
+    .contact-link{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:72px;padding:0 22px;border:1px solid var(--line);border-radius:20px;background:rgba(0,5,0,.44);transition:.25s ease}
+    .contact-link:hover{transform:translateY(-2px);background:rgba(241,218,191,.08);border-color:rgba(241,218,191,.55)}
+    .contact-link strong{font-size:16px;color:var(--almond)}
+    .contact-link span{font-family:Arial,sans-serif;font-size:13px;color:rgba(255,251,255,.56);overflow-wrap:anywhere;text-align:right}
+
+    footer{padding:38px 0 50px;border-top:1px solid var(--line);color:rgba(255,251,255,.48);font-size:11px}
+    .footer-row{display:flex;justify-content:space-between;gap:30px;align-items:center}
+    .footer-logo{height:38px;width:auto;opacity:.86}
+
+    @media (max-width:1000px){
+      :root{--page:min(100% - 28px, 1440px)}
+      .nav-links{display:none}
+      .hero{padding-top:120px}
+      .hero-grid{grid-template-columns:1fr;align-items:start}
+      .hero-visual{height:540px;min-height:0}
+      .hero-card{width:min(64%,520px)}
+      .intro-grid{grid-template-columns:1fr}
+      .intro-symbol{position:relative;top:auto;min-height:320px}
+      .principles{grid-template-columns:1fr 1fr}
+      .swatches{grid-template-columns:repeat(6,1fr)}
+      .swatch:nth-child(n){grid-column:span 3}
+      .swatch:nth-child(4){grid-column:span 6}
+      .type-stage{grid-template-columns:1fr 1fr}
+      .type-card.big{grid-column:1/-1}
+      .merch-card:nth-child(n){grid-column:span 6;min-height:380px}
+    }
+    @media (max-width:660px){
+      :root{--page:calc(100% - 20px);--radius:22px}
+      .nav-wrap{padding:10px 0}
+      .nav{padding:9px 10px 9px 12px}
+      .nav-logo{height:28px!important;max-width:145px}
+      .nav-cta{padding:10px 12px;font-size:9px}
+      .hero{padding:106px 0 28px;min-height:auto}
+      .display{font-size:clamp(42px,15vw,74px)}
+      .hero-sub{font-family:Arial,sans-serif;font-size:16px;line-height:1.5}
+      .hero-visual{height:auto;min-height:0;aspect-ratio:4/5;margin-top:10px;border-radius:24px}
+      .hero-visual:before{left:16px;top:16px;font-size:8px;padding:7px 9px}
+      .hero-card{width:72%;left:50%;right:auto;top:10%;border-radius:20px;transform:translateX(-50%) rotate(1deg)}
+      .hero-symbol{width:150%;left:-34%;bottom:-9%;opacity:.18}
+      .hero-label{left:16px;right:70px;bottom:16px;font-size:11px;line-height:1.4;padding-top:12px}
+      .hero-label:before{font-size:7px;margin-bottom:5px}
+      .hero-index{right:16px;bottom:16px;font-size:9px}
+      section{padding:74px 0}
+      .palette-head,.merch-head{align-items:start;flex-direction:column}
+      .principles{grid-template-columns:1fr}
+      .principle{min-height:150px}
+      .swatches{grid-template-columns:1fr;grid-auto-rows:150px}
+      .swatch:nth-child(n){grid-column:auto}
+      .logo-grid{grid-template-columns:1fr}
+      .logo-tile{min-height:240px}
+      .type-stage{grid-template-columns:1fr}
+      .type-card,.type-card.big{min-height:240px;padding:22px}
+      .type-card:after{left:22px;right:22px;bottom:18px}
+      .type-card .sample{min-height:108px;font-size:clamp(42px,13vw,66px)}
+      .type-card.serif .sample{font-size:clamp(38px,11.6vw,60px)}
+      .type-card.line .sample{font-size:clamp(40px,12vw,68px)}
+      .merch-grid{grid-template-columns:1fr}
+      .merch-card:nth-child(n){grid-column:auto;min-height:390px}
+      #brandbook{scroll-margin-top:78px}
+      .brandbook-image-wrap{border-radius:18px}
+      .contacts-card{grid-template-columns:1fr;gap:26px}
+      .contact-link{align-items:flex-start;flex-direction:column;justify-content:center;padding:16px 18px}
+      .contact-link span{text-align:left}
+      .footer-row{align-items:flex-start;flex-direction:column}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.merch-card img{transition:none}}
+
+    /* Presentation animations */
+    [data-reveal]{opacity:0;transform:translateY(45px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+    [data-reveal].visible{opacity:1;transform:none}
+    .hero-symbol{animation:floatSymbol 8s ease-in-out infinite}
+    .hero-card{animation:cardIn 1.2s cubic-bezier(.2,.7,.2,1) both}
+    .logo-tile,.type-card,.principle,.swatch{transition:transform .35s ease,border-color .35s ease}
+    .logo-tile:hover,.type-card:hover,.principle:hover,.swatch:hover{transform:translateY(-8px)}
+    .merch-card{animation:softFloat 7s ease-in-out infinite}
+    .merch-card:nth-child(2n){animation-delay:1.2s}
+    @keyframes floatSymbol{0%,100%{transform:rotate(-7deg) translateY(0)}50%{transform:rotate(-7deg) translateY(-18px)}}
+    @keyframes cardIn{from{opacity:0;transform:translateX(-50%) translateY(-28px) rotate(5deg)}to{opacity:1;transform:translateX(-50%) translateY(0) rotate(1.5deg)}}
+    @keyframes softFloat{0%,100%{translate:0 0}50%{translate:0 -8px}}
+    .hero .display span{animation:titleReveal .9s .25s both}
+    @keyframes titleReveal{from{opacity:0;letter-spacing:.15em}to{opacity:1;letter-spacing:-.055em}}
+  
+/* image lightbox */
+.zoomable{cursor:zoom-in;transition:transform .3s ease}
+.zoomable:hover{transform:scale(1.02)}
+.lightbox{position:fixed;inset:0;background:rgba(0,5,0,.92);display:none;align-items:center;justify-content:center;z-index:999;padding:20px}
+.lightbox.active{display:flex}
+.lightbox img{max-width:95vw;max-height:90vh;object-fit:contain;border-radius:20px;box-shadow:0 30px 100px rgba(0,0,0,.6);transition:transform .28s ease}
+.lightbox.logo-preview img{transform:none;max-width:min(86vw,1040px)}
+.lightbox-close{position:absolute;right:25px;top:20px;color:#fff;font-size:38px;cursor:pointer;line-height:1}
+@media(max-width:700px){
+ .container{width:calc(100% - 24px)}
+ .hero{padding-top:90px}
+ .display{font-size:46px}
+ .section-title{font-size:32px}
+ .hero-grid,.intro-grid,.type-stage{grid-template-columns:1fr!important}
+ .hero-visual{height:auto;aspect-ratio:4/5;min-height:0}
+ .logo-grid{grid-template-columns:1fr!important}
+ .merch-grid{grid-template-columns:1fr!important}
+ .merch-card,.merch-card:nth-child(n){grid-column:auto!important;min-height:320px}
+ .caption{font-size:10px}
+ .btn{width:100%}
+ .lightbox{padding:10px}
+ .lightbox img{max-width:100%;max-height:85vh}
+ .lightbox.logo-preview img{transform:none;max-width:92vw}
+}
+
+
+    /* Dynamic brand background — inspired by the perspective mark */
+    body{position:relative;isolation:isolate}
+    .brand-motion-bg{
+      position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;
+      background:
+        radial-gradient(circle at calc(18% + var(--mx,0px)) calc(22% + var(--my,0px)), rgba(241,218,191,.075), transparent 34%),
+        radial-gradient(circle at 78% 82%, rgba(54,36,23,.22), transparent 42%),
+        #000500;
+    }
+    .brand-motion-bg::after{
+      content:"";position:absolute;inset:-12%;opacity:.28;
+      background:linear-gradient(115deg,transparent 0 38%,rgba(241,218,191,.025) 39%,transparent 41% 58%,rgba(146,129,122,.03) 60%,transparent 62%);
+      transform:translate3d(calc(var(--mx,0px)*.18),calc(var(--my,0px)*.18),0);
+      animation:bgSheen 16s ease-in-out infinite alternate;
+    }
+    .brand-rays{position:absolute;inset:0;transform:translate3d(calc(var(--mx,0px)*.22),calc(var(--my,0px)*.18),0);will-change:transform}
+    .brand-ray{
+      position:absolute;left:-18vw;bottom:-10vh;width:92vw;height:15vh;
+      background:linear-gradient(90deg,rgba(241,218,191,.00),rgba(241,218,191,.08) 18%,rgba(241,218,191,.035) 74%,rgba(241,218,191,0));
+      clip-path:polygon(0 36%,70% 0,100% 16%,28% 100%);
+      filter:blur(.2px);
+      transform-origin:0 50%;
+      animation:rayDrift 14s ease-in-out infinite alternate;
+      opacity:.55;
+    }
+    .brand-ray:nth-child(1){transform:rotate(-21deg) scaleX(1.03);bottom:1vh;animation-delay:-1s}
+    .brand-ray:nth-child(2){transform:rotate(-13deg) scaleX(.93);bottom:7vh;opacity:.42;animation-delay:-4s}
+    .brand-ray:nth-child(3){transform:rotate(-5deg) scaleX(.82);bottom:13vh;opacity:.34;animation-delay:-7s}
+    .brand-ray:nth-child(4){transform:rotate(4deg) scaleX(.72);bottom:19vh;opacity:.28;animation-delay:-10s}
+    .motion-symbol{
+      position:absolute;width:min(72vw,1050px);height:auto;opacity:.045;filter:blur(.2px);
+      animation:symbolDrift 18s ease-in-out infinite alternate;will-change:transform;
+    }
+    .motion-symbol.one{right:-18vw;top:10vh;transform:rotate(11deg)}
+    .motion-symbol.two{left:-26vw;bottom:-8vh;transform:rotate(-9deg) scale(.78);opacity:.03;animation-delay:-8s}
+    @keyframes rayDrift{0%{translate:-1.5vw 0;scale:1 1}100%{translate:3.5vw -1.5vh;scale:1.035 1}}
+    @keyframes symbolDrift{0%{translate:0 0}100%{translate:-4vw 3vh}}
+    @keyframes bgSheen{0%{translate:-2% 0}100%{translate:3% -2%}}
+    header,main,.contacts,footer{position:relative;z-index:1}
+    section{background:transparent}
+    @media(max-width:700px){
+      .brand-motion-bg{background:radial-gradient(circle at 20% 18%,rgba(241,218,191,.055),transparent 38%),#000500}
+      .brand-ray{width:135vw;height:12vh;left:-45vw;opacity:.28}
+      .brand-ray:nth-child(3),.brand-ray:nth-child(4),.motion-symbol.two{display:none}
+      .motion-symbol.one{width:120vw;right:-58vw;top:22vh;opacity:.03}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .brand-motion-bg::after,.brand-ray,.motion-symbol{animation:none!important}
+    }
+
+
+/* interactive font specimen */
+.font-demo-card{cursor:pointer;outline:none}
+.font-demo-card:focus-visible{border-color:var(--almond);box-shadow:0 0 0 3px rgba(241,218,191,.16)}
+.font-demo-card .type-meta:after{content:"Открыть →";position:absolute;right:0;top:24px;font-size:8px;letter-spacing:.12em;color:var(--almond);opacity:0;transform:translateY(5px);transition:.25s ease}
+.font-demo-card:hover .type-meta:after,.font-demo-card:focus-visible .type-meta:after{opacity:.8;transform:none}
+.font-demo{position:fixed;inset:0;z-index:1200;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(0,5,0,.92);backdrop-filter:blur(14px)}
+.font-demo.active{display:flex}
+.font-demo-panel{position:relative;width:min(1120px,96vw);max-height:90vh;overflow:auto;border:1px solid rgba(241,218,191,.28);border-radius:30px;background:linear-gradient(145deg,#080b08,#000500);box-shadow:0 40px 120px rgba(0,0,0,.65);padding:34px}
+.font-demo-close{position:sticky;float:right;top:0;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid rgba(241,218,191,.28);background:#0a0d0a;color:var(--snow);font:400 28px/1 Arial,sans-serif;cursor:pointer}
+.font-demo-kicker{font:600 10px/1.2 Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--taupe);margin-bottom:12px}
+.font-demo-title{margin:0 70px 28px 0;font-size:clamp(30px,4vw,58px);line-height:.95;color:var(--almond);font-family:Arial,sans-serif;font-weight:700}
+.font-demo-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.font-demo-block{border:1px solid rgba(241,218,191,.16);border-radius:22px;padding:24px;background:rgba(255,255,255,.018);overflow:hidden}
+.font-demo-label{font:600 9px/1.2 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);margin-bottom:14px}
+.font-demo-big{font-size:clamp(40px,6vw,88px);line-height:.93;overflow-wrap:anywhere}
+.font-demo-alphabet{margin-top:18px;font-size:clamp(18px,2vw,28px);line-height:1.35;word-break:break-word;opacity:.78}
+.font-demo[data-font="girlo"] .font-demo-big,.font-demo[data-font="girlo"] .font-demo-alphabet{font-family:"Girlo SP",Arial,sans-serif;font-weight:400;letter-spacing:0;line-height:1.05}
+.font-demo[data-font="ostrovsky"] .font-demo-big,.font-demo[data-font="ostrovsky"] .font-demo-alphabet{font-family:"Ostrovsky",Georgia,serif;font-weight:700;letter-spacing:-.02em}
+.font-demo[data-font="unbounded"] .font-demo-big,.font-demo[data-font="unbounded"] .font-demo-alphabet{font-family:"Arial Black","Arial Narrow",Arial,sans-serif;font-weight:900;letter-spacing:-.055em;transform-origin:left center}
+@media(max-width:660px){.font-demo{padding:10px}.font-demo-panel{padding:20px;border-radius:22px;max-height:94vh}.font-demo-block{padding:18px}.font-demo-title{margin-right:54px}.font-demo-close{width:40px;height:40px}.font-demo-card .type-meta:after{display:none}}
+
+
+/* Girlo SP: keep the original glyph proportions intact. */
+.type-card.line .sample{
+  font-size:clamp(54px,7vw,104px);
+  white-space:nowrap;
+  overflow:visible;
+}
+.font-demo[data-font="girlo"] .font-demo-big{
+  font-size:clamp(48px,7vw,96px);
+}
+.font-demo[data-font="girlo"] .font-demo-alphabet{
+  font-size:clamp(20px,2.2vw,30px);
+  word-spacing:.08em;
+}
+@media(max-width:660px){
+  .type-card.line .sample{
+    font-size:clamp(46px,14vw,72px);
+    white-space:normal;
+  }
+}
+
+
+
+/* === CASE UX: progress + section moods === */
+:root{
+  --theme-bg:#000500;
+  --theme-glow:rgba(241,218,191,.075);
+  --theme-glow-2:rgba(54,36,23,.22);
+}
+.page-progress{
+  position:fixed;left:0;right:0;top:0;height:3px;z-index:2000;
+  background:rgba(241,218,191,.08);pointer-events:none;
+}
+.page-progress__bar{
+  width:0;height:100%;background:linear-gradient(90deg,var(--almond),var(--taupe));
+  transform-origin:left center;box-shadow:0 0 18px rgba(241,218,191,.26);
+  transition:width .08s linear;
+}
+.brand-motion-bg{
+  transition:background 1.15s cubic-bezier(.2,.7,.2,1),filter 1.15s ease;
+  background:
+    radial-gradient(circle at calc(18% + var(--mx,0px)) calc(22% + var(--my,0px)), var(--theme-glow), transparent 34%),
+    radial-gradient(circle at 78% 82%, var(--theme-glow-2), transparent 42%),
+    var(--theme-bg)!important;
+}
+section[data-theme],.contacts[data-theme]{transition:color .8s ease}
+
+
+
+
+@media(prefers-reduced-motion:reduce){
+  .brand-motion-bg,.page-progress__bar{transition:none!important}
+}
+
+
+/* ===== Typography system =====
+   Girlo SP and Ostrovsky are used in their original roles, without synthetic weights.
+   UI/body copy stays neutral for readability. */
+:root{
+  --font-ui:"Unbounded",Arial,sans-serif;
+  --font-display:"Unbounded",Arial,sans-serif;
+  --font-girlo:"Girlo SP",Arial,sans-serif;
+  --font-ostrovsky:"Ostrovsky",Georgia,"Times New Roman",serif;
+}
+html,body,button,a,input,textarea,select{font-synthesis:none}
+body,.nav,.nav-links,.nav-cta,.btn,.ticker,.principle,.palette-head,.swatch,.merch-note,.caption,.contact-link,.brandbook-overlay,footer,button,input,textarea,select{
+  font-family:var(--font-ui);
+}
+.display,.section-title{
+  font-family:var(--font-display);
+  font-weight:900;
+  letter-spacing:-.045em;
+}
+.display{line-height:.87}
+.section-title{line-height:.94}
+.hero-sub,.intro-copy p,.palette-head p,.principle p,.swatch-code,.hero-label,.contact-link span{
+  font-family:var(--font-ui);
+  font-weight:400;
+}
+.eyebrow,.type-meta,.logo-tile small,.merch-card .caption,.hero-index,.font-demo-kicker,.font-demo-label{
+  font-family:var(--font-ui);
+  font-weight:700;
+  letter-spacing:.12em;
+}
+/* Real Girlo SP: untouched glyph proportions. */
+.type-card.line .sample,
+.font-demo[data-font="girlo"] .font-demo-big,
+.font-demo[data-font="girlo"] .font-demo-alphabet{
+  font-family:var(--font-girlo);
+  font-weight:400;
+  font-style:normal;
+  font-synthesis:none;
+  letter-spacing:0;
+  line-height:1;
+  transform:none!important;
+  text-transform:none;
+}
+.type-card.line .sample{font-size:clamp(50px,6.6vw,100px)}
+/* Real Ostrovsky Bold. */
+.type-card.serif .sample,
+.font-demo[data-font="ostrovsky"] .font-demo-big,
+.font-demo[data-font="ostrovsky"] .font-demo-alphabet{
+  font-family:var(--font-ostrovsky);
+  font-weight:700;
+  font-style:normal;
+  font-synthesis:none;
+  letter-spacing:-.01em;
+  line-height:.95;
+  transform:none!important;
+}
+/* Real Unbounded supplied with the project. */
+.type-card.big .sample,
+.font-demo[data-font="unbounded"] .font-demo-big,
+.font-demo[data-font="unbounded"] .font-demo-alphabet{
+  font-family:var(--font-display);
+  font-weight:600;
+  letter-spacing:-.025em;
+  line-height:.94;
+  transform:none!important;
+  text-transform:none;
+}
+.font-demo-title{font-family:var(--font-display);font-weight:600;letter-spacing:-.025em}
+.logo-tile img,.nav-logo,.footer-logo{object-position:center}
+.logo-tile img{transform:none!important}
+.lightbox.logo-preview img{transform:none!important;object-fit:contain;object-position:center}
+@media(max-width:660px){
+  .display{letter-spacing:-.035em;line-height:.9}
+  .section-title{letter-spacing:-.035em;line-height:.96}
+  .type-card.line .sample{font-size:clamp(42px,13vw,70px)}
+}
+
+/* Performance tuning */
+@media (min-width: 661px){
+  main section:not(.hero){content-visibility:auto;contain-intrinsic-size:900px 1200px;}
+}
+img{height:auto;}
+.merch-card img,.hero-card img{transform:translateZ(0);}
+
+
+/* ===== Final site typography: Unbounded is the primary interface family ===== */
+html,body,button,a,input,textarea,select{
+  font-family:"Unbounded",Arial,sans-serif;
+  font-synthesis:none;
+}
+body{font-weight:350;line-height:1.5;letter-spacing:-.008em}
+.nav,.nav-links,.nav-cta,.btn,.ticker,.principle,.palette-head,.swatch,.merch-note,.caption,.contact-link,.brandbook-overlay,footer,
+.hero-sub,.intro-copy p,.palette-head p,.principle p,.swatch-code,.hero-label,.contact-link span,
+.eyebrow,.type-meta,.logo-tile small,.merch-card .caption,.hero-index,.font-demo-kicker,.font-demo-label,.font-demo-close{
+  font-family:"Unbounded",Arial,sans-serif!important;
+}
+.nav-links{font-weight:400;letter-spacing:-.012em}
+.nav-cta,.btn{font-weight:500;letter-spacing:-.012em}
+.hero-sub,.intro-copy p,.palette-head p,.principle p,.merch-note,.contact-link span,.brandbook-overlay p{
+  font-weight:300;line-height:1.62;letter-spacing:-.012em;
+}
+.display{
+  font-family:"Unbounded",Arial,sans-serif!important;
+  font-weight:700!important;
+  letter-spacing:-.055em!important;
+  line-height:.9!important;
+}
+.section-title{
+  font-family:"Unbounded",Arial,sans-serif!important;
+  font-weight:600!important;
+  letter-spacing:-.045em!important;
+  line-height:.98!important;
+}
+.eyebrow,.type-meta,.logo-tile small,.merch-card .caption,.hero-index,.font-demo-kicker,.font-demo-label{
+  font-weight:500!important;
+  letter-spacing:.13em!important;
+}
+.swatch-name,.principle strong{font-family:"Unbounded",Arial,sans-serif;font-weight:500}
+.hero-label:before{font-family:"Unbounded",Arial,sans-serif!important;font-weight:500;letter-spacing:.12em}
+/* Girlo SP is intentionally limited to its own type specimen. */
+.type-card.line .sample,
+.font-demo[data-font="girlo"] .font-demo-big,
+.font-demo[data-font="girlo"] .font-demo-alphabet{
+  font-family:"Girlo SP",Arial,sans-serif!important;
+  font-weight:400!important;
+  font-style:normal!important;
+  font-synthesis:none!important;
+  letter-spacing:0!important;
+  line-height:1!important;
+  transform:none!important;
+  text-transform:none!important;
+}
+/* Ostrovsky is intentionally limited to its own type specimen. */
+.type-card.serif .sample,
+.font-demo[data-font="ostrovsky"] .font-demo-big,
+.font-demo[data-font="ostrovsky"] .font-demo-alphabet{
+  font-family:"Ostrovsky",Georgia,serif!important;
+  font-weight:700!important;
+  font-synthesis:none!important;
+}
+/* Unbounded specimen uses the same real family as the interface, with a stronger weight. */
+.type-card.big .sample,
+.font-demo[data-font="unbounded"] .font-demo-big,
+.font-demo[data-font="unbounded"] .font-demo-alphabet{
+  font-family:"Unbounded",Arial,sans-serif!important;
+  font-weight:600!important;
+  letter-spacing:-.025em!important;
+  line-height:.95!important;
+  transform:none!important;
+}
+@media(max-width:660px){
+  body{font-size:14px;line-height:1.5}
+  .display{letter-spacing:-.042em!important;line-height:.93!important}
+  .section-title{letter-spacing:-.035em!important;line-height:1!important}
+  .nav-links{font-size:10px}
+}
+
+
+
+/* ===== V11 / CONTINUOUS EDITORIAL FLOW =====
+   The page is intentionally one continuous canvas: no section cards, no boxed chapters. */
+:root{
+  --flow-space:clamp(88px,10vw,170px);
+  --flow-gutter:clamp(18px,4vw,64px);
+}
+
+/* One canvas */
+main,section,.contacts,footer{background:transparent!important}
+main{position:relative;overflow:clip}
+section{padding:var(--flow-space) 0;border:0!important}
+section + section{margin-top:clamp(-28px,-2vw,-8px)}
+
+/* Navigation should float, not read as another card */
+.nav{
+  border-color:rgba(241,218,191,.12);
+  background:rgba(0,5,0,.52);
+  box-shadow:none;
+}
+
+/* Hero: remove the framed showcase box and let the object float in the page */
+.hero{padding-top:clamp(118px,11vw,170px);padding-bottom:clamp(70px,8vw,120px)}
+.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);gap:clamp(36px,6vw,96px)}
+.hero-visual{
+  height:min(72vh,760px);min-height:560px;
+  border:0;border-radius:0;background:transparent;overflow:visible;
+}
+.hero-visual:before{left:4%;top:2%;background:transparent;border-color:rgba(241,218,191,.14);backdrop-filter:none}
+.hero-visual:after{display:none}
+.hero-card{
+  top:7%;width:78%;border:0;border-radius:18px;
+  box-shadow:0 38px 100px rgba(0,0,0,.42);
+}
+.hero-label{left:4%;right:10%;bottom:4%;border-top-color:rgba(241,218,191,.16)}
+.hero-index{right:4%;bottom:4%}
+.hero-symbol{width:170%;left:-47%;bottom:-17%;opacity:.13}
+
+/* Ticker becomes a seam in the composition rather than a boxed strip */
+.ticker{
+  border:0;padding:10px 0 18px;
+  opacity:.72;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+}
+
+/* Identity: oversize the symbol and let copy sit beside it without a card */
+#identity{padding-top:clamp(110px,13vw,210px)}
+.intro-grid{grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr);gap:clamp(44px,8vw,130px);align-items:center}
+.intro-symbol{
+  position:sticky;top:18vh;min-height:0;padding:0;
+  border:0;border-radius:0;background:transparent;overflow:visible;
+}
+.intro-symbol img{width:125%;max-width:none;margin-left:-26%;filter:none;opacity:.96}
+.intro-copy p{max-width:960px}
+.principles{
+  margin-top:clamp(42px,6vw,78px);display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid rgba(241,218,191,.18);
+}
+.principle{
+  min-height:0;padding:22px 28px 8px 0;border:0;border-radius:0;background:none;
+  justify-content:flex-start;gap:16px;
+}
+.principle + .principle{padding-left:28px;border-left:1px solid rgba(241,218,191,.12)}
+.principle:hover{transform:none}
+
+/* Palette: five full-width color fields instead of cards */
+#palette{padding-bottom:0}
+.palette-head{margin-bottom:clamp(44px,6vw,82px)}
+.swatches{
+  width:100vw;margin-left:calc(50% - 50vw);
+  display:flex;flex-direction:column;gap:0;grid-auto-rows:auto;
+}
+.swatch,.swatch:nth-child(n){
+  grid-column:auto!important;min-height:clamp(150px,17vw,260px);
+  border:0!important;border-radius:0!important;
+  padding:clamp(24px,4vw,62px) max(var(--flow-gutter),calc((100vw - 1440px)/2 + 20px));
+  flex-direction:row;align-items:flex-end;justify-content:space-between;
+  transition:min-height .45s cubic-bezier(.2,.7,.2,1),filter .35s ease!important;
+}
+.swatch:hover{transform:none!important;min-height:clamp(175px,20vw,310px);filter:saturate(1.04)}
+.swatch-name{font-size:clamp(28px,4vw,66px);letter-spacing:-.04em}
+.swatch-code{font-size:clamp(10px,1vw,14px);text-align:right}
+
+/* Logo behaviour: sequential full-width colour fields, one continuous demonstration */
+.logo-behavior{padding-top:0!important}
+.logo-behavior>.container{width:100%;max-width:none}
+.logo-behavior>.container>.eyebrow,.logo-behavior>.container>.section-title{
+  width:var(--page);margin-left:auto;margin-right:auto;
+}
+.logo-behavior>.container>.section-title{margin-top:10px;margin-bottom:clamp(48px,7vw,90px)}
+.logo-grid{display:block;margin-top:0;width:100%}
+.logo-tile{
+  min-height:clamp(430px,58vw,760px);border:0!important;border-radius:0!important;
+  background-attachment:fixed;overflow:hidden;
+}
+.logo-tile img{width:min(62vw,900px);max-height:58vh;object-fit:contain}
+.logo-tile small{
+  left:var(--flow-gutter);bottom:clamp(22px,3vw,42px);
+  padding:0;background:none;border:0;
+}
+.logo-tile:hover{transform:none}
+
+/* Typography: one tall typographic stream, not three cards */
+#type{padding-top:clamp(120px,13vw,210px)}
+.type-stage{display:block;margin-top:clamp(46px,6vw,82px)}
+.type-card,.type-card.big{
+  min-height:clamp(260px,36vw,520px);padding:clamp(26px,4vw,62px) 0;
+  border:0;border-radius:0;background:none!important;overflow:visible;
+  border-top:1px solid rgba(241,218,191,.15);
+  gap:28px;
+}
+.type-card:last-child{border-bottom:1px solid rgba(241,218,191,.15)}
+.type-card:after{display:none}
+.type-card:hover{transform:none}
+.type-card .sample{
+  min-height:0;font-size:clamp(72px,11vw,178px);line-height:.84!important;
+  align-items:center;overflow:visible;
+}
+.type-card.big .sample{justify-content:flex-start}
+.type-card.serif .sample{justify-content:center;font-size:clamp(64px,9.5vw,150px)}
+.type-card.line .sample{justify-content:flex-end;font-size:clamp(74px,11vw,174px)}
+.type-meta{padding-right:2px}
+.font-demo-card .type-meta:after{top:0}
+
+/* Merch: loose editorial collage instead of a rigid card matrix */
+#merch{padding-top:clamp(130px,14vw,220px)}
+.merch-head{margin-bottom:clamp(56px,8vw,110px)}
+.merch-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);grid-auto-flow:dense;
+  gap:clamp(18px,3vw,48px);align-items:start;
+}
+.merch-card,.merch-card:nth-child(n){
+  min-height:0!important;border:0;border-radius:0;background:none;overflow:visible;animation:none;
+}
+.merch-card img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:14px;box-shadow:0 20px 70px rgba(0,0,0,.22)}
+.merch-card:hover img{transform:translateY(-6px) scale(1.012)}
+.merch-card .caption{
+  position:static;margin-top:12px;padding:0;background:none;border:0;border-radius:0;backdrop-filter:none;
+  color:rgba(255,251,255,.72);font-size:9px;letter-spacing:.08em;
+}
+.merch-card:nth-child(1){grid-column:1/span 5;margin-top:0}
+.merch-card:nth-child(2){grid-column:7/span 5;margin-top:clamp(80px,10vw,150px)}
+.merch-card:nth-child(3){grid-column:2/span 3;margin-top:clamp(40px,6vw,90px)}
+.merch-card:nth-child(4){grid-column:6/span 4;margin-top:clamp(-30px,-2vw,-10px)}
+.merch-card:nth-child(5){grid-column:10/span 3;margin-top:clamp(120px,13vw,190px)}
+.merch-card:nth-child(6){grid-column:1/span 6;margin-top:clamp(70px,9vw,130px)}
+.merch-card:nth-child(7){grid-column:8/span 4;margin-top:clamp(10px,3vw,50px)}
+.merch-card:nth-child(8){grid-column:4/span 3;margin-top:clamp(70px,8vw,120px)}
+
+/* Brandbook: full-bleed page, no framed container */
+#brandbook{padding:clamp(130px,15vw,230px) 0 0}
+#brandbook>.container{width:100%;max-width:none}
+.brandbook-image-wrap{border:0;border-radius:0;background:none;overflow:hidden}
+.brandbook-image-wrap img{width:100vw;height:auto}
+
+/* Contacts: final typography, not a card */
+.contacts{padding:clamp(130px,14vw,220px) 0 clamp(80px,8vw,130px);border:0!important}
+.contacts-card{
+  border:0;border-radius:0;padding:0;background:none;overflow:visible;
+  grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);
+  align-items:end;gap:clamp(50px,9vw,150px);
+}
+.contacts-card:after{display:none}
+.contacts-copy .section-title{font-size:clamp(56px,8vw,122px)}
+.contacts-links{border-top:1px solid rgba(241,218,191,.18)}
+.contact-link{
+  min-height:92px;padding:0;border:0;border-bottom:1px solid rgba(241,218,191,.18);border-radius:0;background:none;
+}
+.contact-link:hover{transform:none;background:none;padding-left:12px}
+footer{border-top:1px solid rgba(241,218,191,.12)}
+
+/* Make section reveal feel continuous: content arrives, the whole section never becomes a 'panel'. */
+[data-reveal]{opacity:1;transform:none;transition:none}
+#identity .intro-copy,#palette .palette-head,.logo-behavior .section-title,#type>.container>.section-title,#merch .merch-head{
+  animation:flowIn .8s both;animation-timeline:view();animation-range:entry 12% cover 32%;
+}
+@keyframes flowIn{from{opacity:.15;transform:translateY(32px)}to{opacity:1;transform:none}}
+
+/* Mobile: preserve the continuous idea, but make it practical */
+@media(max-width:1000px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{height:560px;min-height:0}
+  .intro-grid{grid-template-columns:1fr;gap:48px}
+  .intro-symbol{position:relative;top:auto}
+  .intro-symbol img{width:112%;margin-left:-12%}
+  .type-card .sample{font-size:clamp(64px,13vw,120px)}
+  .type-card.serif .sample{font-size:clamp(56px,11vw,100px)}
+  .type-card.line .sample{font-size:clamp(62px,13vw,116px)}
+}
+@media(max-width:660px){
+  :root{--flow-space:82px;--flow-gutter:16px}
+  section + section{margin-top:0}
+  .hero{padding-top:92px}
+  .hero-visual{aspect-ratio:4/5;height:auto;overflow:hidden}
+  .hero-card{width:78%;top:9%}
+  .hero-symbol{width:165%;left:-40%;bottom:-8%}
+  .principles{grid-template-columns:1fr;border-top:0}
+  .principle,.principle + .principle{padding:18px 0;border-left:0;border-top:1px solid rgba(241,218,191,.14)}
+  .swatch,.swatch:nth-child(n){min-height:132px;padding:22px 16px;align-items:flex-end}
+  .swatch:hover{min-height:132px}
+  .swatch-name{font-size:clamp(24px,8vw,38px)}
+  .swatch-code{font-size:9px;max-width:45%}
+  .logo-tile{min-height:68vh}
+  .logo-tile img{width:82vw;max-height:48vh}
+  .logo-tile small{left:16px;bottom:18px}
+  .type-card,.type-card.big{min-height:240px;padding:28px 0}
+  .type-card .sample,.type-card.serif .sample,.type-card.line .sample{justify-content:flex-start;font-size:clamp(46px,14vw,74px)}
+  .merch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 12px}
+  .merch-card:nth-child(n){grid-column:auto!important;margin-top:0!important}
+  .merch-card:nth-child(1),.merch-card:nth-child(4),.merch-card:nth-child(6){grid-column:1/-1!important}
+  .merch-card img{border-radius:10px}
+  #brandbook{padding-top:100px}
+  .contacts-card{grid-template-columns:1fr;gap:52px}
+  .contact-link{min-height:78px;align-items:center;flex-direction:row;padding:0}
+  .contact-link span{text-align:right}
+}
+
+
+/* Correct background for transparent logo previews. */
+.lightbox.logo-preview img{
+  box-sizing:border-box;
+  padding:clamp(18px,4vw,52px);
+  border-radius:24px;
+  box-shadow:0 30px 100px rgba(0,0,0,.45);
+}
+.lightbox.logo-preview.logo-snow-preview img{background:#FFFBFF;}
+.lightbox.logo-preview.logo-black-preview img{background:#000500;}
+.lightbox.logo-preview.logo-coffee-preview img{background:#362417;}
+.lightbox.logo-preview.logo-taupe-preview img{background:#92817A;}
+@media(max-width:660px){
+  .lightbox.logo-preview img{padding:22px;border-radius:18px;}
+}
+
+
+/* ===== Optical centering fix for the Unbounded specimen ===== */
+.type-card.big .sample{
+  width:100%;
+  justify-content:center !important;
+  text-align:center;
+  padding-left:0;
+  padding-right:0;
+}
+@media(max-width:660px){
+  .type-card.big .sample{
+    justify-content:center !important;
+    text-align:center;
+  }
+}
+
+
+/* ===== Center Girlo SP specimen ===== */
+.type-card.line .sample{
+  width:100%;
+  justify-content:center !important;
+  text-align:center;
+  padding-left:0;
+  padding-right:0;
+}
+@media(max-width:660px){
+  .type-card.line .sample{
+    justify-content:center !important;
+    text-align:center;
+  }
+}
+
+
+/* ===== Seamless cyclic brand ticker ===== */
+.ticker{
+  overflow:hidden;
+  position:relative;
+}
+.ticker-track{
+  display:flex !important;
+  width:max-content !important;
+  min-width:0 !important;
+  padding-left:0 !important;
+  word-spacing:0 !important;
+  will-change:transform;
+  animation:npTickerCycle 30s linear infinite;
+}
+.ticker-run{
+  display:flex;
+  flex:none;
+  align-items:center;
+  gap:clamp(24px,3.2vw,56px);
+  padding-right:clamp(24px,3.2vw,56px);
+}
+.ticker-run span{
+  flex:none;
+  white-space:nowrap;
+}
+.ticker-run .ticker-author{
+  color:var(--almond);
+  opacity:.82;
+}
+@keyframes npTickerCycle{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-33.333333%,0,0)}
+}
+@media(max-width:660px){
+  .ticker-track{animation-duration:20s}
+  .ticker-run{gap:28px;padding-right:28px}
+}
+@media(prefers-reduced-motion:reduce){
+  .ticker-track{animation:none}
+}
+
+
+/* Extra motion pack */
+.caption{display:none!important}
+.hero-card,.merch-card,.logo-tile,.principle,.swatch,.brandbook-image-wrap{
+  animation: riseIn .9s cubic-bezier(.2,.8,.2,1) both;
+}
+.hero-card:hover,.merch-card:hover,.logo-tile:hover{
+  transform:translateY(-14px) rotateX(3deg) scale(1.025);
+  filter:drop-shadow(0 35px 45px rgba(0,0,0,.28));
+}
+.merch-card img,.hero-card img,.logo-tile img{
+  transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s ease;
+}
+.merch-card:hover img,.hero-card:hover img,.logo-tile:hover img{
+  transform:scale(1.06);
+  filter:brightness(1.04) contrast(1.03);
+}
+.motion-symbol{animation:floatSymbol 7s ease-in-out infinite}
+.motion-symbol.two{animation-delay:-2.5s}
+.hero-symbol{animation:pulseGlow 4s ease-in-out infinite}
+.ticker{animation:tickerGlow 3s ease-in-out infinite}
+@keyframes riseIn{
+ from{opacity:0;transform:translateY(45px) scale(.96)}
+ to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes floatSymbol{
+ 0%,100%{transform:translateY(0) rotate(-1deg)}
+ 50%{transform:translateY(-18px) rotate(1deg)}
+}
+@keyframes pulseGlow{
+ 0%,100%{filter:drop-shadow(0 0 0 transparent)}
+ 50%{filter:drop-shadow(0 20px 35px rgba(146,129,122,.45))}
+}
+@keyframes tickerGlow{50%{letter-spacing:.12em}}
+</style>
+
+<style>
+/* mobile header safety */
+@media(max-width:1000px){
+  .nav-wrap{padding-top:max(10px,env(safe-area-inset-top))}
+  .nav{min-height:58px}
+  .nav-actions{gap:7px}
+  .nav-site,.nav-cta{white-space:nowrap}
+}
+@media(max-width:660px){
+  .nav{gap:10px;padding:7px 8px 7px 11px}
+  .nav-logo{height:27px!important;max-width:132px}
+  .nav-site{min-height:40px;padding:0 10px;font-size:8px}
+  .nav-cta{min-height:40px;display:inline-flex;align-items:center;padding:0 11px;font-size:8px}
+}
+</style>
+</head>
+<body>
+
+<div class="page-progress" aria-hidden="true"><div class="page-progress__bar" id="pageProgressBar"></div></div>
+<div class="brand-motion-bg" aria-hidden="true">
+  <div class="brand-rays">
+    <span class="brand-ray"></span><span class="brand-ray"></span><span class="brand-ray"></span><span class="brand-ray"></span>
+  </div>
+  <img class="motion-symbol one"  width="800" height="316" decoding="async"src="assets/symbol.png" alt=""//>
+  <img class="motion-symbol two"  width="800" height="316" decoding="async"src="assets/symbol.png" alt=""//>
+</div>
+<header class="nav-wrap">
+<div class="container nav">
+<a aria-label="Новое поколение — на главную" href="#top"><img class="nav-logo" alt="Новое поколение"  width="808" height="384" decoding="async"src="assets/logo-main.png"//></a>
+<nav aria-label="Основная навигация" class="nav-links">
+<a href="#identity">Айдентика</a><a href="#palette">Палитра</a><a href="#type">Шрифты</a><a href="#merch">Мерч</a>
+<a href="#contacts">Контакты</a></nav>
+<div class="nav-actions"><a class="nav-site" href="../index.html">← Сайт</a><a class="nav-cta" href="#brandbook">Брендбук</a></div>
+</div>
+</header>
+<main id="top">
+<section class="hero" data-reveal data-theme="#000500|rgba(241,218,191,.075)|rgba(54,36,23,.22)">
+<div class="container hero-grid">
+<div class="hero-copy">
+<div class="eyebrow">Фирменный стиль / visual identity</div>
+<h1 class="display">НОВОЕ<span>ПОКОЛЕНИЕ</span></h1>
+<p class="hero-sub">Презентация готового проекта фирменного стиля: концепция, система визуальных элементов и носители бренда.</p>
+<div class="actions">
+<a class="btn primary" href="#merch">Смотреть мерч</a>
+<a class="btn" href="#brandbook">Брендбук</a>
+</div>
+</div>
+<div aria-label="Фирменная символика и мерч" class="hero-visual">
+<img class="hero-symbol zoomable" alt=""  width="800" height="316" decoding="async"src="assets/symbol.png"//>
+<div class="hero-card"><img class="zoomable" alt="Фирменный шопер"  width="812" height="1014" decoding="async" fetchpriority="high"src="assets/tote.webp"//></div>
+<div class="hero-label">Графика строится вокруг знака, похожего на расходящиеся линии перспективы.</div>
+<div class="hero-index">NP / 01</div>
+</div>
+</div>
+</section>
+<div aria-hidden="true" class="ticker"><div class="ticker-track"><div class="ticker-run">
+<span>SNOW</span><span>·</span><span>ALMOND CREAM</span><span>·</span><span>TAUPE</span><span>·</span><span>DARK COFFEE</span><span>·</span><span>BLACK</span><span>·</span><span>НОВОЕ ПОКОЛЕНИЕ</span><span>·</span><span class="ticker-author">АВТОР — ДЕНИС ВОРОНКОВ</span><span>·</span>
+</div><div class="ticker-run">
+<span>SNOW</span><span>·</span><span>ALMOND CREAM</span><span>·</span><span>TAUPE</span><span>·</span><span>DARK COFFEE</span><span>·</span><span>BLACK</span><span>·</span><span>НОВОЕ ПОКОЛЕНИЕ</span><span>·</span><span class="ticker-author">АВТОР — ДЕНИС ВОРОНКОВ</span><span>·</span>
+</div><div class="ticker-run">
+<span>SNOW</span><span>·</span><span>ALMOND CREAM</span><span>·</span><span>TAUPE</span><span>·</span><span>DARK COFFEE</span><span>·</span><span>BLACK</span><span>·</span><span>НОВОЕ ПОКОЛЕНИЕ</span><span>·</span><span class="ticker-author">АВТОР — ДЕНИС ВОРОНКОВ</span><span>·</span>
+</div></div></div>
+<section id="identity" data-reveal data-theme="#070805|rgba(241,218,191,.07)|rgba(54,36,23,.28)">
+<div class="container intro-grid">
+<div class="intro-symbol"><img class="zoomable" alt="Фирменный знак Новое поколение"  width="800" height="316" decoding="async"src="assets/symbol.png"//></div>
+<div class="intro-copy">
+<div class="eyebrow">01 / Символика</div>
+<h2 class="section-title">Знак, который задаёт направление.</h2>
+<p>Геометрический символ работает как самостоятельный акцент и как часть логотипа «Новое поколение». В цифровой среде он становится главным навигационным мотивом: крупным, контрастным и узнаваемым.</p>
+<div class="principles">
+<article class="principle"><strong>01 / Перспектива</strong><p>Расходящиеся линии превращены в композиционный приём для экранов, карточек и фонов.</p></article>
+<article class="principle"><strong>02 / Контраст</strong><p>Светлый Almond Cream на почти чёрном фоне сохраняет характер исходного брендбука.</p></article>
+<article class="principle"><strong>03 / Масштаб</strong><p>Знак уверенно работает и как небольшой маркер, и как крупная графическая форма.</p></article>
+</div>
+</div>
+</div>
+</section>
+<section id="palette" data-reveal data-theme="#100c09|rgba(146,129,122,.12)|rgba(54,36,23,.34)">
+<div class="container">
+<div class="palette-head">
+<div><div class="eyebrow">02 / Фирменные цвета</div><h2 class="section-title">Пять цветов.<br/>Один характер.</h2></div>
+<p>Палитра перенесена из брендбука без изменений. Основной цифровой контраст — Black + Almond Cream, а Taupe и Dark Coffee работают как спокойные акцентные тона.</p>
+</div>
+<div class="swatches">
+<article class="swatch"><span class="swatch-name">Snow</span><span class="swatch-code">#FFFBFF · RGB 255, 251, 255</span></article>
+<article class="swatch"><span class="swatch-name">Almond Cream</span><span class="swatch-code">#F1DABF · RGB 241, 218, 191</span></article>
+<article class="swatch"><span class="swatch-name">Taupe</span><span class="swatch-code">#92817A · RGB 146, 129, 122</span></article>
+<article class="swatch"><span class="swatch-name">Dark Coffee</span><span class="swatch-code">#362417 · RGB 54, 36, 23</span></article>
+<article class="swatch"><span class="swatch-name">Black</span><span class="swatch-code">#000500 · RGB 0, 5, 0</span></article>
+</div>
+</div>
+</section>
+<section class="logo-behavior" data-reveal data-theme="#050604|rgba(241,218,191,.06)|rgba(146,129,122,.16)">
+<div class="container">
+<div class="eyebrow">03 / Поведение логотипа</div>
+<h2 class="section-title">Контрастные версии<br/>для разных фонов.</h2>
+<div class="logo-grid">
+<div class="logo-tile coffee"><img class="zoomable" alt="Светлый логотип на кофейном фоне"  width="808" height="384" decoding="async" loading="lazy"src="assets/logo-coffee.png"//><small>Almond / Coffee</small></div>
+<div class="logo-tile taupe"><img class="zoomable" alt="Тёмный логотип на серо-бежевом фоне"  width="808" height="384" decoding="async" loading="lazy"src="assets/logo-taupe.png"//><small>Coffee / Taupe</small></div>
+<div class="logo-tile black"><img class="zoomable" alt="Белый логотип на чёрном фоне"  width="808" height="384" decoding="async" loading="lazy"src="assets/logo-black.png"//><small>Snow / Black</small></div>
+<div class="logo-tile snow"><img class="zoomable" alt="Чёрный логотип на светлом фоне"  width="808" height="384" decoding="async" loading="lazy"src="assets/logo-snow.png"//><small>Black / Snow</small></div>
+</div>
+</div>
+</section>
+<section id="type" data-reveal data-theme="#0e0b08|rgba(241,218,191,.08)|rgba(54,36,23,.30)">
+<div class="container">
+<div class="eyebrow">04 / Шрифты</div>
+<h2 class="section-title">Типографика с<br/>разным темпом.</h2>
+<div class="type-stage">
+<article class="type-card big font-demo-card" data-font-demo="unbounded" tabindex="0" role="button" aria-label="Открыть демонстрацию шрифта Unbounded"><div class="type-meta"><span>Primary / Display</span><span>Unbounded</span></div><div class="sample">unbounded</div></article>
+<article class="type-card serif font-demo-card" data-font-demo="ostrovsky" tabindex="0" role="button" aria-label="Открыть демонстрацию шрифта Ostrovsky"><div class="type-meta"><span>Secondary / Display</span><span>Ostrovsky</span></div><div class="sample">ОСТРОВСКИЙ</div></article>
+<article class="type-card line font-demo-card" data-font-demo="girlo" tabindex="0" role="button" aria-label="Открыть демонстрацию шрифта Girlo SP"><div class="type-meta"><span>Accent / Display</span><span>Girlo SP</span></div><div class="sample">girlo sp</div></article>
+</div>
+</div>
+</section>
+<section id="merch" data-reveal data-theme="#030503|rgba(241,218,191,.055)|rgba(54,36,23,.22)">
+<div class="container">
+<div class="merch-head">
+<div><div class="eyebrow">05 / Мерч</div><h2 class="section-title">Айдентика<br/>на носителях.</h2></div>
+<p class="merch-note">Использованы реальные визуалы из загруженного брендбука: флаг, футболки, значки, канцелярия, папка и шопер.</p>
+</div>
+<div class="merch-grid">
+<article class="merch-card"><img class="zoomable" alt="Фирменный флаг" loading="lazy"  width="770" height="865" decoding="async"src="assets/flag.webp"//><div class="caption"><span>Флаг</span><span>01</span></div></article>
+<article class="merch-card"><img class="zoomable" alt="Футболка цвета taupe" loading="lazy"  width="693" height="866" decoding="async"src="assets/tshirt-taupe.webp"//><div class="caption"><span>Футболка / Taupe</span><span>02</span></div></article>
+<article class="merch-card"><img class="zoomable" alt="Чёрный фирменный значок" loading="lazy"  width="1075" height="1075" decoding="async"src="assets/pin-black.webp"//><div class="caption"><span>Значок / Black</span><span>03</span></div></article>
+<article class="merch-card"><img class="zoomable" alt="Фирменный шопер" loading="lazy"  width="812" height="1014" decoding="async"src="assets/tote.webp"//><div class="caption"><span>Шопер</span><span>04</span></div></article>
+<article class="merch-card"><img class="zoomable" alt="Чёрная фирменная футболка" loading="lazy"  width="770" height="962" decoding="async"src="assets/tshirt-black.webp"//><div class="caption"><span>Футболка</span><span>05</span></div></article>
+<article class="merch-card"><img class="zoomable" alt="Фирменная канцелярия" loading="lazy"  width="992" height="661" decoding="async"src="assets/stationery-cream.webp"//><div class="caption"><span>Канцелярия</span><span>06</span></div></article>
+<article class="merch-card"><img class="zoomable" alt="Фирменная папка и ручки" loading="lazy"  width="661" height="992" decoding="async"src="assets/folder-black.webp"//><div class="caption"><span>Папка</span><span>07</span></div></article>
+<article class="merch-card"><img class="zoomable" alt="Фирменный значок цвета taupe" loading="lazy"  width="667" height="667" decoding="async"src="assets/pin-taupe.webp"//><div class="caption"><span>Значок / Taupe</span><span>08</span></div></article>
+</div>
+</div>
+</section>
+<section id="brandbook" data-theme="#0c0a08|rgba(146,129,122,.09)|rgba(54,36,23,.26)">
+<div class="container">
+<div class="brandbook-image-wrap" aria-label="Открыть брендбук в полном размере">
+<img class="zoomable" alt="Брендбук «Новое поколение»" src="assets/brandbook.webp" width="2048" height="1195" loading="eager" decoding="async"//>
+</div>
+</div>
+</section>
+
+</main>
+<section class="contacts" id="contacts" data-theme="#0b0806|rgba(241,218,191,.075)|rgba(54,36,23,.34)">
+<div class="container">
+<div class="contacts-card">
+<div class="contacts-copy">
+<div class="eyebrow">06 / Контакты</div>
+<h2 class="section-title">Связаться<br/>со мной.</h2>
+<p>По вопросам проекта, дизайна и сотрудничества — напиши во ВКонтакте или Telegram.</p>
+</div>
+<div class="contacts-links">
+<a class="contact-link" href="https://vk.ru/askuyr_official" rel="noopener noreferrer" target="_blank"><strong>ВКонтакте ↗</strong><span>vk.ru/askuyr_official</span></a>
+<a class="contact-link" href="https://t.me/askuyr" rel="noopener noreferrer" target="_blank"><strong>Telegram ↗</strong><span>t.me/askuyr</span></a>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="container footer-row">
+<img alt="Новое поколение" class="footer-logo"  width="808" height="384" decoding="async"src="assets/logo-main.png"//>
+<div><strong>Автор разработки брендбука — Денис Воронков</strong> · <a href="https://vk.ru/askuyr_official" rel="noopener noreferrer" target="_blank">VK</a> · <a href="https://t.me/askuyr" rel="noopener noreferrer" target="_blank">Telegram</a></div>
+</div>
+</footer>
+<script>
+const items=document.querySelectorAll('[data-reveal]');
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.12});
+items.forEach(i=>observer.observe(i));
+</script>
+
+
+<div class="font-demo" id="fontDemo" aria-hidden="true" data-font="girlo">
+  <div class="font-demo-panel" role="dialog" aria-modal="true" aria-labelledby="fontDemoTitle">
+    <button class="font-demo-close" type="button" aria-label="Закрыть">×</button>
+    <div class="font-demo-kicker">TYPE SPECIMEN / CYRILLIC + LATIN</div>
+    <h3 class="font-demo-title" id="fontDemoTitle">Girlo SP</h3>
+    <div class="font-demo-grid">
+      <div class="font-demo-block">
+        <div class="font-demo-label">Кириллица</div>
+        <div class="font-demo-big">Новое поколение</div>
+        <div class="font-demo-alphabet">А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я<br>а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я</div>
+      </div>
+      <div class="font-demo-block">
+        <div class="font-demo-label">Latin</div>
+        <div class="font-demo-big">New generation</div>
+        <div class="font-demo-alphabet">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z · 0123456789</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox"><div class="lightbox-close">×</div><img src="" alt="Просмотр изображения"></div>
+<script>
+const box=document.getElementById('lightbox');
+const view=box.querySelector('img');
+document.querySelectorAll('.zoomable').forEach(img=>{
+ img.addEventListener('click',()=>{
+   view.src=img.currentSrc || img.src;
+   const tile=img.closest('.logo-tile');
+   const isLogo=!!tile;
+   box.classList.remove('logo-snow-preview','logo-black-preview','logo-coffee-preview','logo-taupe-preview');
+   box.classList.toggle('logo-preview',isLogo);
+   if(tile){
+     if(tile.classList.contains('snow')) box.classList.add('logo-snow-preview');
+     else if(tile.classList.contains('black')) box.classList.add('logo-black-preview');
+     else if(tile.classList.contains('coffee')) box.classList.add('logo-coffee-preview');
+     else if(tile.classList.contains('taupe')) box.classList.add('logo-taupe-preview');
+   }
+   box.classList.add('active');
+ });
+});
+box.addEventListener('click',e=>{
+ if(e.target===box || e.target.classList.contains('lightbox-close')){
+   box.classList.remove('active','logo-preview','logo-snow-preview','logo-black-preview','logo-coffee-preview','logo-taupe-preview');
+ }
+});
+view.addEventListener('click',e=>e.stopPropagation());
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape') box.classList.remove('active','logo-preview','logo-snow-preview','logo-black-preview','logo-coffee-preview','logo-taupe-preview');
+});
+</script>
+
+
+
+<script>
+document.querySelectorAll('a[href="#brandbook"]').forEach(link=>{
+  link.addEventListener('click',e=>{
+    e.preventDefault();
+    const target=document.getElementById('brandbook');
+    if(!target) return;
+    target.scrollIntoView({behavior:'smooth',block:'start'});
+    history.replaceState(null,'','#brandbook');
+  });
+});
+</script>
+
+<script>
+(() => {
+  const root=document.documentElement;
+  const fine=matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(fine){
+    window.addEventListener('pointermove',e=>{
+      const x=(e.clientX/window.innerWidth-.5)*28;
+      const y=(e.clientY/window.innerHeight-.5)*18;
+      root.style.setProperty('--mx',x+'px');
+      root.style.setProperty('--my',y+'px');
+    },{passive:true});
+  }
+})();
+</script>
+
+
+<script>
+(() => {
+  const modal=document.getElementById('fontDemo');
+  const title=document.getElementById('fontDemoTitle');
+  const panel=modal.querySelector('.font-demo-panel');
+  const close=modal.querySelector('.font-demo-close');
+  const names={girlo:'Girlo SP',ostrovsky:'Ostrovsky',unbounded:'Unbounded'};
+  let lastFocus=null;
+  function openFont(card){
+    const f=card.dataset.fontDemo;
+    lastFocus=card;
+    modal.dataset.font=f;
+    title.textContent=names[f]||f;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    panel.scrollTop=0;
+    close.focus();
+  }
+  function closeFont(){
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(lastFocus) lastFocus.focus({preventScroll:true});
+  }
+  document.querySelectorAll('.font-demo-card').forEach(card=>{
+    card.addEventListener('click',()=>openFont(card));
+    card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openFont(card)}});
+  });
+  close.addEventListener('click',closeFont);
+  modal.addEventListener('click',e=>{if(e.target===modal) closeFont()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('active')) closeFont()});
+})();
+</script>
+
+
+<script>
+(() => {
+  const progress=document.getElementById('pageProgressBar');
+  const root=document.documentElement;
+  const themed=[...document.querySelectorAll('[data-theme]')];
+  let ticking=false;
+
+  function updateCaseUI(){
+    const scrollTop=window.scrollY || document.documentElement.scrollTop;
+    const max=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);
+    const pct=Math.min(100,Math.max(0,(scrollTop/max)*100));
+    if(progress) progress.style.width=pct+'%';
+
+    const probe=window.innerHeight*.44;
+    let active=themed[0];
+    let best=Infinity;
+    themed.forEach(el=>{
+      const r=el.getBoundingClientRect();
+      const center=r.top+Math.min(r.height,window.innerHeight)*.5;
+      const d=Math.abs(center-probe);
+      if(r.bottom>0 && r.top<window.innerHeight && d<best){best=d;active=el;}
+    });
+    if(active){
+      const [bg,g1,g2]=(active.dataset.theme||'').split('|');
+      if(bg) root.style.setProperty('--theme-bg',bg);
+      if(g1) root.style.setProperty('--theme-glow',g1);
+      if(g2) root.style.setProperty('--theme-glow-2',g2);
+    }
+    ticking=false;
+  }
+  function requestUpdate(){if(!ticking){ticking=true;requestAnimationFrame(updateCaseUI)}}
+  addEventListener('scroll',requestUpdate,{passive:true});
+  addEventListener('resize',requestUpdate,{passive:true});
+  updateCaseUI();
+})();
+</script>
+
+
+<script>
+/* One-time cleanup for older PWA versions; this build does not register a service worker. */
+if ('serviceWorker' in navigator) { navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister())); }
+if ('caches' in window) { caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))); }
+</script>
+
+</body>
+</html>
